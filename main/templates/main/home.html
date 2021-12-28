@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--divinectorweb.com-->
+
+<head>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"></head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>    
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <style>
+
+        
+
+
+    
+    /* KARWA-CAROUSEL */
+    header .carousel-inner .item{
+        height: 100vh;
+  }
+    header .carousel-inner .item img{
+        width: 100%;
+        height: 100%;
+  }
+    .carousel-caption{
+        padding-bottom: 280px;
+  }
+    .carousel-caption h2{
+        font-size: 50px;
+        text-transform: uppercase;
+  }
+    .carousel-control.right{
+        background-image: none;
+  }
+    .carousel-control.left{
+        background-image: none;
+  }
+    .container-fluid{
+        color: transparent;
+}
+    .disease{
+        width: 80px;
+        height: 30px;
+        margin: 10px;
+}
+   
+    .carousel-btn{
+    background-color:rgb(6, 248, 6) ;
+    border-radius: 5px;
+    margin: 10px;
+    width: 150px;
+    padding: 5px 0px 5px 0px;
+    font-size: 18px;
+    font-weight: bold;
+}
+    .buttn{
+    
+    text-align: center;
+    background-image: linear-gradient(to right, #77A1D3 0%, #79CBCA  51%, #77A1D3  100%);
+    color: white;
+    margin-top: 5px;
+    padding-top: 0.1px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    
+}
+  .algoused{
+    text-align: center;
+    background-image: linear-gradient(19deg, #FAACA8 0%, #DDD6F3 100%);
+    color: white;
+    /* margin-top: -20px; */
+    padding-top: 0.1px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  }
+    .imageinfo{
+    border-radius: 5px;
+    position:absolute;
+    left: 30%;
+    margin: 2% 10%;
+}
+    .textinfo{
+
+    /* margin: 16%; */
+    font-size: 20px;
+}
+    
+
+
+/* *****END OF carousel***************** */
+
+
+    body{
+            /* background-color: #8BC6EC;
+            background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%); */
+            z-index: -1;
+            overflow-x: hidden;
+            font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+            
+        }
+        .navbar.a{
+
+        /* padding-top: 2px; */
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        margin-bottom: -10px;
+    }
+        .ullist{
+          margin-left: -20px;
+        }
+        .list{
+            background-color: #ffffff;
+            color: rgb(0, 0, 0); 
+            padding: 0.5rem;
+            border-radius: 10px;
+            font-size: 1rem;
+            margin-top: 7px;
+            margin-left: -15px;
+            /* width: 300px;
+            display: inline-block; */
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+            font-size: 1rem
+
+            
+            
+        }
+
+        #demo{
+            background-color: #0c5f96;
+            color: #fff;
+            padding: .5rem;
+            border-radius: 1rem;
+            font-size: 1rem;
+            margin: 5px;
+            display: inline-block; 
+            white-space: pre-line;
+            margin: 5px;
+            font-size: 1rem;
+            padding: .2rem;
+            
+        }
+        .col-4.a{
+            border-radius: 2%;
+            padding-bottom: 32%;
+            /* padding-left: 30%; */
+
+            margin-left: 5%; 
+            width: 50%;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+            border-top-width: 10px;
+            border-top-style: outset;
+            
+
+            border-top-color: lightblue;
+        }
+
+        /* .main{
+            
+            margin-top: 40px;
+            border-radius: 0%;
+            padding: 5%;
+            margin-left: 15%;
+            margin-right: 15%;
+            height: 450px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+            border-left-width: 15px;
+            border-left-style: bold;
+            
+
+            border-left-color: lightblue;
+            background-color: white;
+
+
+            
+            z-index: 2;
+            
+
+        } */
+        .button_primary {
+	        background-color: lightblue;
+}
+    .button {
+      display: inline-block;
+        margin: 0;
+        margin-top: -2px;
+        padding: 0.50rem 2rem;
+      border: 0;
+      border-radius: 0.317rem;
+      background-color: lightblue;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+        line-height: 1.5;
+      /* font-family: "Helvetica Neue", Arial, sans-serif; */
+      cursor: pointer;
+      -webkit-appearance: none;
+      -webkit-font-smoothing: antialiased;
+}
+
+    .button:hover {
+	    opacity: 0.85;
+    }
+
+    .button:focus {
+      outline: thin dotted lightblue;
+      outline: 5px auto -webkit-focus-ring-color;
+      outline-offset: -2px;
+    }
+    
+    .button_primary.btn-grad {
+        background-image: linear-gradient(to right, #77A1D3 0%, #79CBCA  51%, #77A1D3  100%)
+     
+    }
+    .button_primary.btn-grad {
+            margin-top: 50px;
+            padding: 15px 45px;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;            
+            box-shadow: 0 0 20px #eee;
+            border-radius: 10px;
+
+          }
+
+          .button_primary.btn-grad:hover {
+            background-position: right center; /* change the direction of the change here */
+            color: #fff;
+            text-decoration: none;
+          }
+          .button.button_primary.newbtn{
+              margin-top: 10px;
+              width: 50%;
+              margin-left: 26%;
+              margin-bottom: 20px;
+              font-size: 20px;
+              box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+              word-spacing: 5px;
+
+          }
+          .svgg{
+              position: absolute;
+              width: 1000px;
+              height: 350px;
+              margin-left: 44%;
+              margin-top: 8%;
+              /* transform: rotateY(180deg); */
+          }
+          .num{
+            font-size: 30px;
+            font-weight: bolder;
+            margin-top: 8px;
+            margin-right: 11px;
+            color: #e5a5a3;
+          }
+          li{
+            margin-top: 10px;
+            font-size: 15px;
+          }
+    </style>
+</head>
+
+<body>
+    <!-- <header> -->
+
+        <nav class="navbar navbar-expand-lg navbar-dark border border-dark sticky-top a  " >
+            <a class="navbar-brand text-dark" href="#">Disease Prediction System</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarText">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active ">
+                  <!-- <a class="nav-link text-xl text-dark" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a> -->
+                </li>
+                <!-- <li class="nav-item ml-auto ">
+                  <a class="nav-link text-xl text-dark  " href="">Predict Now!</a>
+                </li> -->
+                
+              </ul>
+              
+            </div>
+          </nav>
+        <div class="carousel slide" data-ride="carousel" id="carousel-example-generic">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li class="active" data-slide-to="0" data-target="#carousel-example-generic"></li>
+                <li data-slide-to="1" data-target="#carousel-example-generic"></li>
+                <li data-slide-to="2" data-target="#carousel-example-generic"></li>
+            </ol><!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img alt="..." src="pill-1884775.jpg">
+                    <div class="carousel-caption">
+                        <h2 class="animated bounceInRight" style="animation-delay: 1s">DISEASE PREDICTION SYSTEM USING
+                            MACHINE LEARNING ALGORITHMS</h2>
+                        <h3 class="animated bounceInLeft" style="animation-delay: 2s"></h3>
+                    </div>
+                </div>
+                <div class="item">
+                    <img alt="..." src="dna-1811955.jpg">
+                    <div class="carousel-caption">
+                        <h2 class="animated slideInDown" style="animation-delay: 1s">UTILIZATION OF 3 DIFFERENT ALGORITHMS</h2>
+                        <h3 class="animated slideInRight" style="animation-delay: 2s">Random Forest,SVM and Naive Bayes</h3>
+                        <!-- <button class="carousel-btn">Read More.</button> -->
+                    </div>
+                </div>
+                <div class="item">
+                    <img alt="..." src="human-skeleton-163715.jpg">
+                    <div class="carousel-caption">
+                        <h2 class="animated zoomIn" style="animation-delay: 1s">Easy to Use Interface</h2>
+                        <h3 class="animated zoomIn" style="animation-delay: 2s">Select the appropriate symptoms and get your diseases predicted</h3>
+                    </div>
+                </div>
+            </div><!-- Controls -->
+            <a class="left carousel-control" data-slide="prev" href="#carousel-example-generic" role="button"><span
+                    aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span> <span
+                    class="sr-only">Previous</span></a> <a class="right carousel-control" data-slide="next"
+                href="#carousel-example-generic" role="button"><span aria-hidden="true"
+                    class="glyphicon glyphicon-chevron-right"></span> <span class="sr-only">Next</span></a>
+
+        </div>
+
+        <!-- <div class="textinfo">
+            <hr>
+            <p>As, rise in the field of technology machine learning is widely used in various fields. Now it has various
+                applications on the field of health industry. It works as a helping hand for the field of health
+                industry. By the help of various machine learning algorithms, we can make various models for predicting
+                the results through the large amount of dataset present in medical field. This paper comprises of
+                efficient machine learning algorithms used in predicting disease through symptoms. As, the health
+                industry has a huge amount of data for various fields so, we want to make a system where we can use
+                various other applications of machine learning on health industry. This all had been done to make the
+                better medical decisions and also for rise in the accuracy. As accurate analysis of the early prediction
+                of disease helps in the patient care and the society services. These all challenges can be easier by the
+                help of various tools, algorithms and framework provided by the machine learning. In addition to all
+                these predictions we are making a chatbot for all that where patients can add the symptoms that are
+                helpful to predict the disease and also check their diabetes status through the various information
+                provided to system by the patients.</p>
+        </div> -->
+        <div class="algoused" style="box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;"><h3>Algorithms Used</h3><hr></div>
+        <section class="text-gray-600 body-font"  style="box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;">
+          <div class="container px-15 py-24 mx-auto flex flex-wrap">
+            <div class="flex flex-wrap -m-4">
+              <div class="p-4 lg:w-1/3 md:w-full">
+                <div class="flex border-2 rounded-lg border-gray-200 border-opacity-50 p-8 sm:flex-row flex-col" style="box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;">
+                  <div class="w-16 h-16 sm:mr-8 sm:mb-0 mb-4 inline-flex items-center justify-center rounded-full bg-pink-100 text-pink-500 flex-shrink-0">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-8 h-8" viewBox="0 0 24 24">
+                      <p class="num">1</p>
+                    </svg>
+                  </div>
+                  <div class="flex-grow">
+                    <h2 class="text-gray-900 text-4xl title-font font-large mb-3">Random Forest</h2>
+                    <p class="leading-relaxed text-base text-lg">
+                        <li > Supervised learning algorithm</li>
+                        <li> Creates ensemble of decision trees</li>
+                        <li> Flexible to classification & regression problems</li>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="p-4 lg:w-1/3 md:w-full" >
+                <div class="flex border-2 rounded-lg border-gray-200 border-opacity-50 p-8 sm:flex-row flex-col" style="box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;">
+                  <div class="w-16 h-16 sm:mr-8 sm:mb-0 mb-4 inline-flex items-center justify-center rounded-full bg-pink-100 text-pink-500 flex-shrink-0">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10" viewBox="0 0 24 24">
+                      <p class="num">2</p>
+                    </svg>
+                  </div>
+                  <div class="flex-grow">
+                    <h2 class="text-gray-900 text-4xl title-font font-large mb-3">SVM</h2>
+                    <p class="leading-relaxed text-base text-lg">
+                        <li > Supervised learning algorithm</li>
+                        <li> Creates the best line /decision boundary so that we can easily put the new data point in the correct category  </li>
+                        <li> It is memory efficient</li>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="p-4 lg:w-1/3 md:w-full">
+                <div class="flex border-2 rounded-lg border-gray-200 border-opacity-50 p-8 sm:flex-row flex-col" style="box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;">
+                  <div class="w-16 h-16 sm:mr-8 sm:mb-0 mb-4 inline-flex items-center justify-center rounded-full bg-pink-100 text-pink-500 flex-shrink-0">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-8 h-8" viewBox="0 0 24 24">
+                      <p class="num">3</p>
+                    </svg>
+                  </div>
+                  <div class="flex-grow">
+                    <h2 class="text-gray-900 text-4xl title-font font-large mb-3">Naive Bayes</h2>
+                    <p class="leading-relaxed text-base text-lg">
+                        <li> Supervised learning algorithm used for solving classification problems</li>
+                        <li> Simple & effective in building fast ML models that can make quick predictions</li>
+                        <li> It is highly scalable with the number of predictors and data points</li>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        
+        <div class="buttn">
+            <h3>Steps for Disease Prediction</h3><hr>
+        </div>
+        <section class="text-gray-800 body-font" style="margin-left: -400px; margin-top: -10px;box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;">
+            <div class="container px-5 py-24 mx-auto flex flex-wrap">
+              <div class="flex relative pt-10 pb-20 sm:items-center md:w-2/3 mx-auto">
+                <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+                  <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+                </div>
+                <div class="flex-shrink-0 w-20 h-8 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-blue-500 text-white relative z-10 title-font font-medium text-sm" style="background-color: #79CBCA;">1</div>
+                <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+                  <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+                    <h2 class="font-medium title-font text-gray-900 mb-1 text-2xl">Open Disease Prediction Website</h2>
+                    <p class="leading-relaxed">It has all the information regarding the various algorithms used</p>
+                  </div>
+                </div>
+              </div>
+
+              
+              <img src="observations.svg" alt="observations" class="svgg">
+
+              <div class="flex relative pb-20 sm:items-center md:w-2/3 mx-auto">
+                <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+                  <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+                </div>
+                <div class="flex-shrink-0 w-20 h-8 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-blue-500 text-white relative z-10 title-font font-medium text-sm" style="background-color: #79CBCA;">2</div>
+                <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+                  <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+                    <h2 class="font-medium title-font text-gray-900 mb-1 text-2xl">Click on Predict Now!</h2>
+                    <p class="leading-relaxed">This button will redirect you to a new page where you can predict the diseases</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex relative pb-20 sm:items-center md:w-2/3 mx-auto">
+                <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+                  <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+                </div>
+                <div class="flex-shrink-0 w-20 h-8 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-blue-500 text-white relative z-10 title-font font-medium text-sm" style="background-color: #79CBCA;">3</div>
+                <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+                 
+                  <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+                    <h2 class="font-medium title-font text-gray-900 mb-1 text-2xl">Select the Symptoms</h2>
+                    <p class="leading-relaxed">Select the appropriate symptoms from the drop down list.You can also delete the symptoms.Then finally click on predict disease</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex relative pb-10 sm:items-center md:w-2/3 mx-auto">
+                <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+                  <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+                </div>
+                <div class="flex-shrink-0 w-20 h-8 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-blue-500 text-white relative z-10 title-font font-medium text-sm" style="background-color: #79CBCA;">4</div>
+                <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+                  
+                  <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+                    <h2 class="font-medium title-font text-gray-900 mb-1 text-2xl   ">Diseases Predicted</h2>
+                    <p class="leading-relaxed">Get your predicted diseases result by the different machine learning algorithms. </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        <!-- <div class="imageinfo">
+            <img src="index.jpg" alt="No Image Found">
+        </div> -->
+        
+        <button type="button" class="button button_primary btn-grad newbtn" onclick = load()>Predict Now!</button>
+    <!-- </header> -->
+    <script>
+        function load(){
+            window.location.href = "http://127.0.0.1:8000/main/"
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js">
+    </script>
+</body>
+
+</html>

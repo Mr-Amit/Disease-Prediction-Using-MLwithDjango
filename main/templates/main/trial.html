@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body{
+            background-color: #8BC6EC;
+            background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+            z-index: -1;
+            overflow-x: hidden;
+            
+        }
+
+        .ullist{
+          margin-left: -20px;
+        }
+        .list{
+            background-color: #ffffff;
+            color: rgb(0, 0, 0); 
+            padding: 0.5rem;
+            border-radius: 10px;
+            font-size: 1rem;
+            margin-top: 7px;
+            margin-left: -15px;
+            /* width: 300px;
+            display: inline-block; */
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+            font-size: 1rem
+
+            
+            
+        }
+
+        #demo{
+            background-color: #0c5f96;
+            color: #fff;
+            padding: .5rem;
+            border-radius: 1rem;
+            font-size: 1rem;
+            margin: 5px;
+            display: inline-block; 
+            white-space: pre-line;
+            margin: 5px;
+            font-size: 1rem;
+            padding: .2rem;
+            
+        }
+        .col-4.a{
+            border-radius: 2%;
+            padding-bottom: 32%;
+            /* padding-left: 30%; */
+
+            margin-left: 5%; 
+            width: 50%;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+            border-top-width: 10px;
+            border-top-style: outset;
+            
+
+            border-top-color: lightblue;
+        }
+
+        .main{
+            
+            margin-top: 40px;
+            border-radius: 1%;
+            padding: 5%;
+            margin-left: 15%;
+            margin-right: 15%;
+            height: 450px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+            border-left-width: 15px;
+            border-left-style: bold;
+            
+
+            border-left-color: lightblue;
+            background-color: white;
+
+
+            
+            z-index: 2;
+            
+
+        }
+        .button_primary {
+	        background-color: lightblue;
+}
+    .button {
+      display: inline-block;
+        margin: 0;
+        margin-top: -2px;
+        padding: 0.50rem 2rem;
+      border: 0;
+      border-radius: 0.317rem;
+      background-color: lightblue;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+        line-height: 1.5;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      cursor: pointer;
+      -webkit-appearance: none;
+      -webkit-font-smoothing: antialiased;
+}
+
+    .button:hover {
+	    opacity: 0.85;
+    }
+
+    .button:focus {
+      outline: thin dotted lightblue;
+      outline: 5px auto -webkit-focus-ring-color;
+      outline-offset: -2px;
+    }
+    
+    .button_primary.btn-grad {
+        background-image: linear-gradient(to right, #77A1D3 0%, #79CBCA  51%, #77A1D3  100%)
+     
+    }
+    .button_primary.btn-grad {
+            margin-top: 50px;
+            padding: 15px 45px;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;            
+            box-shadow: 0 0 20px #eee;
+            border-radius: 10px;
+
+          }
+
+      .button_primary.a1{
+
+        width: 100%;
+      }    
+      .button_danger.a2{
+        margin-top: 27px;
+        width: 100%;
+        background-color: #9599E2;
+      }
+
+
+      .button_danger.a3{
+        margin-top: 24px;
+        width: 100%;
+        background-color: #e8a7a3;
+      }
+
+          .button_primary.btn-grad:hover {
+            background-position: right center; /* change the direction of the change here */
+            color: #fff;
+            text-decoration: none;
+          }
+ 
+
+    .navbar.a{
+        
+        padding-left: 15px;
+        padding-top: 2px;
+        background-color: white;
+
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    }
+
+
+    .get{
+      margin-top: 50px;
+      margin-left: -200px;
+      margin-right: -200px;
+      
+      z-index: 2;
+      
+      
+    }
+
+    </style>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"></head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <body>
+        
+        <nav class="navbar navbar-expand-lg navbar-dark border border-dark sticky-top a  ">
+            <a class="navbar-brand text-dark" href="#">Disease Prediction System</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarText">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active ">
+                  
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-xl text-dark  " href="">Predict Now!</a>
+                </li>
+                
+              </ul>
+              
+            </div>
+          </nav>
+<div class="container">
+
+    <div class="main justify-content-center ">
+    <div class="row justify-content-center">
+      <div class="col-4 b">
+        <p>Select Symptoms</p>
+
+    <select id="ddlViewBy" class="form-select form-select-sm" aria-label=".form-select-sm example">
+        <!-- <option value="1">Abdominal Pain</option>
+        <option value="2">Abnormal Menstruation</option>
+        <option value="3">Acidity</option>
+        <option value="4">Acute Liver Failure</option>
+        <option value="5">Altered Sensorium</option>
+        <option value="6">Anxiety</option>
+        <option value="7">Back Pain</option>
+        <option value="8">Belly Pain</option>
+        <option value="9">Blackheads</option>
+        <option value="10">Bladder Discomfort</option>
+        <option value="11">Blister</option>
+        <option value="12">Blood In Sputum</option>
+        <option value="13">Bloody Stool</option>
+        <option value="14">Blurred And Distorted Vision</option>
+        <option value="15">Breathlessness</option>
+        <option value="16">Brittle Nails</option>
+        <option value="17">Bruising</option>
+        <option value="18">Burning Micturition</option>
+        <option value="19">Chest Pain</option>
+        <option value="20">Chills</option>
+        <option value="21">Cold Hands And Feets</option>
+        <option value="22">Coma</option>
+        <option value="23">Congestion</option>
+        <option value="24">Constipation</option>
+        <option value="25">Continuous Feel Of Urine</option>
+        <option value="26">Continuous Sneezing</option>
+        <option value="27">Cough</option>
+        <option value="28">Cramps</option>
+        <option value="29">Dark Urine</option>
+        <option value="30">Dehydration</option>
+        <option value="31">Depression</option>
+        <option value="32">Diarrhoea</option>
+        <option value="33">Dischromic  Patches</option>
+        <option value="34">Distention Of Abdomen</option>
+        <option value="35">Dizziness</option>
+        <option value="36">Drying And Tingling Lips</option>
+        <option value="37">Enlarged Thyroid</option>
+        <option value="38">Excessive Hunger</option>
+        <option value="39">Extra Marital Contacts</option>
+        <option value="40">Family History</option>
+        <option value="41">Fast Heart Rate</option>
+        <option value="42">Fatigue</option>
+        <option value="43">Fluid Overload</option>
+        <option value="44">Fluid Overload</option>
+        <option value="45">Foul Smell Of Urine</option>
+        <option value="46">Headache</option>
+        <option value="47">High Fever</option>
+        <option value="48">Hip Joint Pain</option>
+        <option value="49">History Of Alcohol Consumption</option>
+        <option value="50">Increased Appetite</option>
+        <option value="51">Indigestion</option>
+        <option value="52">Inflammatory Nails</option>
+        <option value="53">Internal Itching</option>
+        <option value="54">Irregular Sugar Level</option>
+        <option value="55">Irritability</option>
+        <option value="56">Irritation In Anus</option>
+        <option value="57">Itching</option>
+        <option value="58">Joint Pain</option>
+        <option value="59">Knee Pain</option>
+        <option value="60">Lack Of Concentration</option>
+        <option value="61">Lethargy</option>
+        <option value="62">Loss Of Appetite</option>
+        <option value="63">Loss Of Balance</option>
+        <option value="64">Loss Of Smell</option>
+        <option value="65">Malaise</option>
+        <option value="66">Mild Fever</option>
+        <option value="67">Mood Swings</option>
+        <option value="68">Movement Stiffness</option>
+        <option value="69">Mucoid Sputum</option>
+        <option value="70">Muscle Pain</option>
+        <option value="71">Muscle Wasting</option>
+        <option value="72">Muscle Weakness</option>
+        <option value="73">Nausea</option>
+        <option value="74">Neck Pain</option>
+        <option value="75">Nodal Skin Eruptions</option>
+        <option value="76">Obesity</option>
+        <option value="77">Pain Behind The Eyes</option>
+        <option value="78">Pain During Bowel Movements</option>
+        <option value="79">Pain In Anal Region</option>
+        <option value="80">Painful Walking</option>
+        <option value="81">Palpitations</option>
+        <option value="82">Passage Of Gases</option>
+        <option value="83">Patches In Throat</option>
+        <option value="84">Phlegm</option>
+        <option value="85">Polyuria</option>
+        <option value="86">Prominent Veins On Calf</option>
+        <option value="87">Puffy Face And Eyes</option>
+        <option value="88">Pus Filled Pimples</option>
+        <option value="89">Receiving Blood Transfusion</option>
+        <option value="90">Receiving Unsterile Injections</option>
+        <option value="91">Red Sore Around Nose</option>
+        <option value="92">Red Spots Over Body</option>
+        <option value="93">Redness Of Eyes</option>
+        <option value="94">Restlessness</option>
+        <option value="95">Runny Nose</option>
+        <option value="96">Rusty Sputum</option>
+        <option value="97">Scurring</option>
+        <option value="98">Shivering</option>
+        <option value="99">Silver Like Dusting</option>
+        <option value="100">Sinus Pressure</option>
+        <option value="101">Skin Peeling</option>
+        <option value="102">Skin Rash</option>
+        <option value="103">Slurred Speech</option>
+        <option value="104">Small Dents In Nails</option>
+        <option value="105">Spinning Movements</option>
+        <option value="106">Spotting  Urination</option>
+        <option value="107">Stiff Neck</option>
+        <option value="108">Stomach Bleeding</option>
+        <option value="109">Stomach Pain</option>
+        <option value="110">Sunken Eyes</option>
+        <option value="111">Sweating</option>
+        <option value="112">Swelled Lymph Nodes</option>
+        <option value="113">Swelling Joints</option>
+        <option value="114">Swelling Of Stomach</option>
+        <option value="115">Swollen Blood Vessels</option>
+        <option value="116">Swollen Extremeties</option>
+        <option value="117">Swollen Legs</option>
+        <option value="118">Throat Irritation</option>
+        <option value="119">Toxic Look (Typhos)</option>
+        <option value="120">Ulcers On Tongue</option>
+        <option value="121">Unsteadiness</option>
+        <option value="122">Visual Disturbances</option>
+        <option value="123">Vomiting</option>
+        <option value="124">Watering From Eyes</option>
+        <option value="125">Weakness In Limbs</option>
+        <option value="126">Weakness Of One Body Side</option>
+        <option value="127">Weight Gain</option>
+        <option value="128">Weight Loss</option>
+        <option value="129">Yellow Crust Ooze</option>
+        <option value="130">Yellow Urine</option>
+        <option value="131">Yellowing Of Eyes</option>
+        <option value="132">Yellowish Skin</option> -->
+    </select>
+<br>
+       
+    <button onclick="myFunction()" class="button button_primary a1" id="add">Add</button>
+    <button class="button button_danger a3" id="rem">Delete</button>
+    <button class="button button_danger a2" onClick="window.close();" >Clear</button>
+    
+</div>
+
+    <!-- <div class="col-4 a border border-info" style="height: 100px; overflow-y: scroll;"> -->
+    <div class="col-4 a " style="height: 100px; overflow-y: scroll;">
+
+        <!-- <p id="demo" ></p> -->
+
+        <ul id="myList" class="ullist">
+            
+        </ul>
+
+
+
+    </div>
+    
+    <button class="button button_primary btn-grad" id="results" >Predict Now!</button>
+</div>
+
+</div>
+    
+    <p id="indexes" style="text-align: right; color: red; font-size: 0.1px;" ></p>    
+    
+    <div class="get" style="background-color: white;">
+   
+    <section class="text-gray-600 body-font" >
+        <div class="container px-5 py-16 mx-auto">
+          <div class="flex flex-col text-center w-full mb-10">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900">Disease Predicted by Algortihms</h1>
+          </div>
+          <div class="flex flex-wrap -m-4">
+            <div class="p-4 md:w-1/3 ">
+              <div class="flex rounded-lg h-full  p-8 flex-col" style="background-color: #FAACA8;
+              background-image: linear-gradient(19deg, #FAACA8 0%, #DDD6F3 100%); box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+              ">
+                <div class="flex items-center mb-3">
+                  
+                  <h2 class="text-gray-900 text-3xl title-font font-medium">Random Forest<hr></h2>
+                  
+                </div>
+                <div class="flex-grow">
+                  
+                  <h2 id = "id1" style="color: white; "></h2>
+                  <!-- <a class="mt-3 text-blue-500 inline-flex items-center">Learn More
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                      <path d="M5 12h14M12 5l7 7-7 7"></path>
+                    </svg>
+                  </a> -->
+                </div>
+              </div>
+            </div>
+            <div class="p-4 md:w-1/3">
+              <div class="flex rounded-lg h-full bg-gray-100 p-8 flex-col" style="background-color: #8BC6EC;
+              background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%); box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+              ">
+                <div class="flex items-center mb-3">
+                  
+                  <h2 class="text-gray-900 text-3xl title-font font-medium">SVM<hr></h2>
+                </div>
+                <div class="flex-grow">
+                  <h2 id = "id2" style="color: white;"></h2>
+                  <!-- <a class="mt-3 text-blue-500 inline-flex items-center">Learn More
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                      <path d="M5 12h14M12 5l7 7-7 7"></path>
+                    </svg>
+                  </a> -->
+                </div>
+              </div>
+            </div>
+            <div class="p-4 md:w-1/3">
+              <div class="flex rounded-lg h-full bg-gray-100 p-8 flex-col" style="background-image: linear-gradient( 103.3deg,  rgba(252,225,208,1) 30%, rgba(255,173,214,1) 55.7%, rgba(162,186,245,1) 81.8% );box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;">
+                <div class="flex items-center mb-3">
+                  
+                  <h2 class="text-gray-900 text-3xl title-font font-medium">Naive Bayes<hr></h2>
+                </div>
+                <div class="flex-grow">
+                  <h2 id = "id3" style="color: white;"></h2>
+                  <!-- <a class="mt-3 text-blue-500 inline-flex items-center">Learn More
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                      <path d="M5 12h14M12 5l7 7-7 7"></path>
+                    </svg>
+                  </a> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+        <!-- <h2 id="report"></h2> -->
+        <!-- <button type="button" id="sas">Wow</button> -->
+
+
+
+
+
+
+
+    </div>
+</div>
+<script>
+  var simp = {1: 'Abdominal Pain',
+                  2: 'Abnormal Menstruation',
+                  3: 'Acidity',
+                  4: 'Acute Liver Failure',
+                  5: 'Altered Sensorium',
+                  6: 'Anxiety',
+                  7: 'Back Pain',
+                  8: 'Belly Pain',
+                  9: 'Blackheads',
+                  10: 'Bladder Discomfort',
+                  11: 'Blister',
+                  12: 'Blood In Sputum',
+                  13: 'Bloody Stool',
+                  14: 'Blurred And Distorted Vision',
+                  15: 'Breathlessness',
+                  16: 'Brittle Nails',
+                  17: 'Bruising',
+                  18: 'Burning Micturition',
+                  19: 'Chest Pain',
+                  20: 'Chills',
+                  21: 'Cold Hands And Feets',
+                  22: 'Coma',
+                  23: 'Congestion',
+                  24: 'Constipation',
+                  25: 'Continuous Feel Of Urine',
+                  26: 'Continuous Sneezing',
+                  27: 'Cough',
+                  28: 'Cramps',
+                  29: 'Dark Urine',
+                  30: 'Dehydration',
+                  31: 'Depression',
+                  32: 'Diarrhoea',
+                  33: 'Dischromic  Patches',
+                  34: 'Distention Of Abdomen',
+                  35: 'Dizziness',
+                  36: 'Drying And Tingling Lips',
+                  37: 'Enlarged Thyroid',
+                  38: 'Excessive Hunger',
+                  39: 'Extra Marital Contacts',
+                  40: 'Family History',
+                  41: 'Fast Heart Rate',
+                  42: 'Fatigue',
+                  43: 'Fluid Overload',
+                  44: 'Fluid Overload.1',
+                  45: 'Foul Smell Of Urine',
+                  46: 'Headache',
+                  47: 'High Fever',
+                  48: 'Hip Joint Pain',
+                  49: 'History Of Alcohol Consumption',
+                  50: 'Increased Appetite',
+                  51: 'Indigestion',
+                  52: 'Inflammatory Nails',
+                  53: 'Internal Itching',
+                  54: 'Irregular Sugar Level',
+                  55: 'Irritability',
+                  56: 'Irritation In Anus',
+                  57: 'Itching',
+                  58: 'Joint Pain',
+                  59: 'Knee Pain',
+                  60: 'Lack Of Concentration',
+                  61: 'Lethargy',
+                  62: 'Loss Of Appetite',
+                  63: 'Loss Of Balance',
+                  64: 'Loss Of Smell',
+                  65: 'Malaise',
+                  66: 'Mild Fever',
+                  67: 'Mood Swings',
+                  68: 'Movement Stiffness',
+                  69: 'Mucoid Sputum',
+                  70: 'Muscle Pain',
+                  71: 'Muscle Wasting',
+                  72: 'Muscle Weakness',
+                  73: 'Nausea',
+                  74: 'Neck Pain',
+                  75: 'Nodal Skin Eruptions',
+                  76: 'Obesity',
+                  77: 'Pain Behind The Eyes',
+                  78: 'Pain During Bowel Movements',
+                  79: 'Pain In Anal Region',
+                  80: 'Painful Walking',
+                  81: 'Palpitations',
+                  82: 'Passage Of Gases',
+                  83: 'Patches In Throat',
+                  84: 'Phlegm',
+                  85: 'Polyuria',
+                  86: 'Prominent Veins On Calf',
+                  87: 'Puffy Face And Eyes',
+                  88: 'Pus Filled Pimples',
+                  89: 'Receiving Blood Transfusion',
+                  90: 'Receiving Unsterile Injections',
+                  91: 'Red Sore Around Nose',
+                  92: 'Red Spots Over Body',
+                  93: 'Redness Of Eyes',
+                  94: 'Restlessness',
+                  95: 'Runny Nose',
+                  96: 'Rusty Sputum',
+                  97: 'Scurring',
+                  98: 'Shivering',
+                  99: 'Silver Like Dusting',
+                  100: 'Sinus Pressure',
+                  101: 'Skin Peeling',
+                  102: 'Skin Rash',
+                  103: 'Slurred Speech',
+                  104: 'Small Dents In Nails',
+                  105: 'Spinning Movements',
+                  106: 'Spotting  Urination',
+                  107: 'Stiff Neck',
+                  108: 'Stomach Bleeding',
+                  109: 'Stomach Pain',
+                  110: 'Sunken Eyes',
+                  111: 'Sweating',
+                  112: 'Swelled Lymph Nodes',
+                  113: 'Swelling Joints',
+                  114: 'Swelling Of Stomach',
+                  115: 'Swollen Blood Vessels',
+                  116: 'Swollen Extremeties',
+                  117: 'Swollen Legs',
+                  118: 'Throat Irritation',
+                  119: 'Toxic Look (Typhos)',
+                  120: 'Ulcers On Tongue',
+                  121: 'Unsteadiness',
+                  122: 'Visual Disturbances',
+                  123: 'Vomiting',
+                  124: 'Watering From Eyes',
+                  125: 'Weakness In Limbs',
+                  126: 'Weakness Of One Body Side',
+                  127: 'Weight Gain',
+                  128: 'Weight Loss',
+                  129: 'Yellow Crust Ooze',
+                  130: 'Yellow Urine',
+                  131: 'Yellowing Of Eyes',
+                  132: 'Yellowish Skin'};
+
+  function symptoms(simp){
+
+    const mySelect  = document.getElementById("ddlViewBy"); 
+    let option = document.createElement('option');
+
+    for(var key in simp){
+      let option = document.createElement('option');
+      option.textContent = simp[key];
+      option.value = key;
+      mySelect.appendChild(option);
+    }  
+  }
+
+  document.addEventListener("DOMContentLoaded", function() {
+  symptoms(simp);
+});
+
+</script>
+<script>
+
+  var recent = new Array;
+  var zzz= 0 ;
+  var cpy =  new Array;
+  var arr =new Array;
+  var s2darr =new Array;
+  var optdict2 = {1:'Abdominal Pain',
+    2:' Abnormal Menstruation',
+    3: 'Acidity',
+    4: 'Acute Liver Failure',
+    5:'Altered Sensorium',
+    6:'Anxiety',
+    7:'Back Pain',
+    8:'Belly Pain',
+    9:'Blackheads',
+    10:'Bladder Discomfort',
+    11:'Blister',
+    12:'Blood In Sputum',
+    13:'Bloody Stool',
+    14:'Blurred And Distorted Vision',
+    15:'Breathlessness',
+    16:'Brittle Nails',
+    17:'Bruising',
+    18:'Burning Micturition',
+    19:'Chest Pain',
+    20:'Chills',
+    21:'Cold Hands And Feets',
+    22:'Coma',
+    23:'Congestion',
+    24:'Constipation',
+    25:'Continuous Feel Of Urine',
+    26:'Continuous Sneezing',
+    27:'Cough',
+    28:'Cramps',
+    29:'Dark Urine',
+    30:'Dehydration',
+    31:'Depression',
+    32:'Diarrhoea',
+    33:'Dischromic Patches',
+    34:'Distention Of Abdomen',
+    35:'Dizziness',
+    36:'Drying And Tingling Lips',
+    37:'Enlarged Thyroid',
+    38:'Excessive Hunger',
+    39:'Extra Marital Contacts',
+    40:'Family History',
+    41:'Fast Heart Rate',
+    42:'Fatigue',
+    43:'Fluid Overload',
+    44:'Fluid Overload',
+    45:'Foul Smell Of Urine',
+    46:'Headache',
+    47:'High Fever',
+    48:'Hip Joint Pain',
+    49:'History Of Alcohol Consumption',
+    50:'Increased Appetite',
+    51:'Indigestion',
+    52:'Inflammatory Nails',
+    53:'Internal Itching',
+    54:'Irregular Sugar Level',
+    55:'Irritability',
+    56:'Irritation In Anus',
+    57:'Itching',
+    58:'Joint Pain',
+    59:'Knee Pain',
+    60:'Lack Of Concentration',
+    61:'Lethargy',
+    62:'Loss Of Appetite',
+    63:'Loss Of Balance',
+    64:'Loss Of Smell',
+    65:'Malaise',
+    66:'Mild Fever',
+    67:'Mood Swings',
+    68:'Movement Stiffness',
+    69:'Mucoid Sputum',
+    70:'Muscle Pain',
+    71:'Muscle Wasting',
+    72:'Muscle Weakness',
+    73:'Nausea',
+    74:'Neck Pain',
+    75:'Nodal Skin Eruptions',
+    76:'Obesity',
+    77:'Pain Behind The Eyes',
+    78:'Pain During Bowel Movements',
+    79:'Pain In Anal Region',
+    80:'Painful Walking',
+    81:'Palpitations',
+    82:'Passage Of Gases',
+    83:'Patches In Throat',
+    84:'Phlegm',
+    85:'Polyuria',
+    86:'Prominent Veins On Calf',
+    87:'Puffy Face And Eyes',
+    88:'Pus Filled Pimples',
+    89:'Receiving Blood Transfusion',
+    90:'Receiving Unsterile Injections',
+    91:'Red Sore Around Nose',
+    92:'Red Spots Over Body',
+    93:'Redness Of Eyes',
+    94:'Restlessness',
+    95:'Runny Nose',
+    96:'Rusty Sputum',
+    97:'Scurring',
+    98:'Shivering',
+    99:'Silver Like Dusting',
+    100:'Sinus Pressure',
+    101:'Skin Peeling',
+    102:'Skin Rash',
+    103:'Slurred Speech',
+    104:'Small Dents In Nails',
+    105:'Spinning Movements',
+    106:'Spotting  Urination',
+    107:'Stiff Neck',
+    108:'Stomach Bleeding',
+    109:'Stomach Pain',
+    110:'Sunken Eyes',
+    111:'Sweating',
+    112:'Swelled Lymph Nodes',
+    113:'Swelling Joints',
+    114:'Swelling Of Stomach',
+    115:'Swollen Blood Vessels',
+    116:'Swollen Extremeties',
+    117:'Swollen Legs',
+    118:'Throat Irritation',
+    119:'Toxic Look (Typhos)',
+    120:'Ulcers On Tongue',
+    121:'Unsteadiness',
+    122:'Visual Disturbances',
+    123:'Vomiting',
+    124:'Watering From Eyes',
+    125:'Weakness In Limbs',
+    126:'Weakness Of One Body Side',
+    127:'Weight Gain',
+    128:'Weight Loss',
+    129:'Yellow Crust Ooze',
+    130:'Yellow Urine',
+    131:'Yellowing Of Eyes',
+    132:'Yellowish Skin'};
+
+    var optdict = {
+  'Abdominal Pain': 1,
+  'Abnormal Menstruation': 2,
+  'Acidity': 3,
+  'Acute Liver Failure': 4,
+  'Altered Sensorium': 5,
+  'Anxiety': 6,
+  'Back Pain': 7,
+  'Belly Pain': 8,
+  'Blackheads': 9,
+  'Bladder Discomfort': 10,
+  'Blister': 11,
+  'Blood In Sputum': 12,
+  'Bloody Stool': 13,
+  'Blurred And Distorted Vision': 14,
+  'Breathlessness': 15,
+  'Brittle Nails': 16,
+  'Bruising': 17,
+  'Burning Micturition': 18,
+  'Chest Pain': 19,
+  'Chills': 20,
+  'Cold Hands And Feets': 21,
+  'Coma': 22,
+  'Congestion': 23,
+  'Constipation': 24,
+  'Continuous Feel Of Urine': 25,
+  'Continuous Sneezing': 26,
+  'Cough': 27,
+  'Cramps': 28,
+  'Dark Urine': 29,
+  'Dehydration': 30,
+  'Depression': 31,
+  'Diarrhoea': 32,
+  'Dischromic Patches': 33,
+  'Distention Of Abdomen': 34,
+  'Dizziness': 35,
+  'Drying And Tingling Lips': 36,
+  'Enlarged Thyroid': 37,
+  'Excessive Hunger': 38,
+  'Extra Marital Contacts': 39,
+  'Family History': 40,
+  'Fast Heart Rate': 41,
+  'Fatigue': 42,
+  'Fluid Overload': 43,
+  'Fluid Overload.1': 44,
+  'Foul Smell Of Urine': 45,
+  'Headache': 46,
+  'High Fever': 47,
+  'Hip Joint Pain': 48,
+  'History Of Alcohol Consumption': 49,
+  'Increased Appetite': 50,
+  'Indigestion': 51,
+  'Inflammatory Nails': 52,
+  'Internal Itching': 53,
+  'Irregular Sugar Level': 54,
+  'Irritability': 55,
+  'Irritation In Anus': 56,
+  'Itching': 57,
+  'Joint Pain': 58,
+  'Knee Pain': 59,
+  'Lack Of Concentration': 60,
+  'Lethargy': 61,
+  'Loss Of Appetite': 62,
+  'Loss Of Balance': 63,
+  'Loss Of Smell': 64,
+  'Malaise': 65,
+  'Mild Fever': 66,
+  'Mood Swings': 67,
+  'Movement Stiffness': 68,
+  'Mucoid Sputum': 69,
+  'Muscle Pain': 70,
+  'Muscle Wasting': 71,
+  'Muscle Weakness': 72,
+  'Nausea': 73,
+  'Neck Pain': 74,
+  'Nodal Skin Eruptions': 75,
+  'Obesity': 76,
+  'Pain Behind The Eyes': 77,
+  'Pain During Bowel Movements': 78,
+  'Pain In Anal Region': 79,
+  'Painful Walking': 80,
+  'Palpitations': 81,
+  'Passage Of Gases': 82,
+  'Patches In Throat': 83,
+  'Phlegm': 84,
+  'Polyuria': 85,
+  'Prominent Veins On Calf': 86,
+  'Puffy Face And Eyes': 87,
+  'Pus Filled Pimples': 88,
+  'Receiving Blood Transfusion': 89,
+  'Receiving Unsterile Injections': 90,
+  'Red Sore Around Nose': 91,
+  'Red Spots Over Body': 92,
+  'Redness Of Eyes': 93,
+  'Restlessness': 94,
+  'Runny Nose': 95,
+  'Rusty Sputum': 96,
+  'Scurring': 97,
+  'Shivering': 98,
+  'Silver Like Dusting': 99,
+  'Sinus Pressure': 100,
+  'Skin Peeling': 101,
+  'Skin Rash': 102,
+  'Slurred Speech': 103,
+  'Small Dents In Nails': 104,
+  'Spinning Movements': 105,
+  'Spotting  Urination': 106,
+  'Stiff Neck': 107,
+  'Stomach Bleeding': 108,
+  'Stomach Pain': 109,
+  'Sunken Eyes': 110,
+  'Sweating': 111,
+  'Swelled Lymph Nodes': 112,
+  'Swelling Joints': 113,
+  'Swelling Of Stomach': 114,
+  'Swollen Blood Vessels': 115,
+  'Swollen Extremeties': 116,
+  'Swollen Legs': 117,
+  'Throat Irritation': 118,
+  'Toxic Look (Typhos)': 119,
+  'Ulcers On Tongue': 120,
+  'Unsteadiness': 121,
+  'Visual Disturbances': 122,
+  'Vomiting': 123,
+  'Watering From Eyes': 124,
+  'Weakness In Limbs': 125,
+  'Weakness Of One Body Side': 126,
+  'Weight Gain': 127,
+  'Weight Loss': 128,
+  'Yellow Crust Ooze': 129,
+  'Yellow Urine': 130,
+  'Yellowing Of Eyes': 131,
+  'Yellowish Skin': 132
+}
+
+  function myFunction() {
+    var jsarr = ['Abdominal Pain','Abnormal Menstruation','Acidity','Acute Liver Failure','Altered Sensorium','Anxiety','Back Pain','Belly Pain','Blackheads','Bladder Discomfort','Blister','Blood In Sputum','Bloody Stool','Blurred And Distorted Vision','Breathlessness','Brittle Nails','Bruising','Burning Micturition','Chest Pain','Chills','Cold Hands And Feets','Coma','Congestion','Constipation','Continuous Feel Of Urine','Continuous Sneezing','Cough','Cramps','Dark Urine','Dehydration','Depression','Diarrhoea','Dischromic  Patches','Distention Of Abdomen','Dizziness','Drying And Tingling Lips','Enlarged Thyroid','Excessive Hunger','Extra Marital Contacts','Family History','Fast Heart Rate','Fatigue','Fluid Overload','Fluid Overload','Foul Smell Of Urine','Headache','High Fever','Hip Joint Pain','History Of Alcohol Consumption','Increased Appetite','Indigestion','Inflammatory Nails','Internal Itching','Irregular Sugar Level','Irritability','Irritation In Anus','Itching','Joint Pain','Knee Pain','Lack Of Concentration','Lethargy','Loss Of Appetite','Loss Of Balance','Loss Of Smell','Malaise','Mild Fever','Mood Swings','Movement Stiffness','Mucoid Sputum','Muscle Pain','Muscle Wasting','Muscle Weakness','Nausea','Neck Pain','Nodal Skin Eruptions','Obesity','Pain Behind The Eyes','Pain During Bowel Movements','Pain In Anal Region','Painful Walking','Palpitations','Passage Of Gases','Patches In Throat','Phlegm','Polyuria','Prominent Veins On Calf','Puffy Face And Eyes','Pus Filled Pimples','Receiving Blood Transfusion','Receiving Unsterile Injections','Red Sore Around Nose','Red Spots Over Body','Redness Of Eyes','Restlessness','Runny Nose','Rusty Sputum','Scurring','Shivering','Silver Like Dusting','Sinus Pressure','Skin Peeling','Skin Rash','Slurred Speech','Small Dents In Nails','Spinning Movements','Spotting  Urination','Stiff Neck','Stomach Bleeding','Stomach Pain','Sunken Eyes','Sweating','Swelled Lymph Nodes','Swelling Joints','Swelling Of Stomach','Swollen Blood Vessels','Swollen Extremeties','Swollen Legs','Throat Irritation','Toxic Look (Typhos)','Ulcers On Tongue','Unsteadiness','Visual Disturbances','Vomiting','Watering From Eyes','Weakness In Limbs','Weakness Of One Body Side','Weight Gain','Weight Loss','Yellow Crust Ooze','Yellow Urine','Yellowing Of Eyes','Yellowish Skin']
+    var e = document.getElementById("ddlViewBy").value;
+
+    //OLD METHOD FOR GETTING DATA
+    //document.getElementById("indexes").innerHTML += (e-1) + ', '
+    // document.getElementById("demo").innerHTML +=   jsarr[e-1]  + "<br>" 
+
+
+    console.log("E:" + e);
+    // Array storing index
+    arr.push(e-1);
+    let lastElement = arr.slice(-1);
+    document.getElementById("indexes").innerHTML += lastElement + ', '
+    zzz++;
+
+    // Creating list items to display the selected symptoms
+    const myList  = document.getElementById("myList"); 
+    let newListItem = document.createElement('li');
+    newListItem.className = 'list';  
+    newListItem.textContent = jsarr[e-1];
+    myList.appendChild(newListItem);
+
+
+    // TEST
+      var tt = String(jsarr[e-1]);
+      
+
+      var t = tt;
+      recent.push(t);
+      // var t = tt.toLowerCase().toString().split(' ').join('_');
+      
+
+    
+
+    // Added Buttom to remove recent symptom
+    const btnRemove = document.querySelector('#rem');
+    btnRemove.onclick = (e) => {
+      e.preventDefault();
+
+      //Removing the last Element
+      var list = document.getElementById("myList");
+      list.removeChild(list.lastElementChild);
+
+      //Removing the last index as well
+      document.getElementById("indexes").innerHTML = '';
+      arr.pop();
+      recent.pop();
+      for(let i = 0; i < arr.length; i++){
+        document.getElementById("indexes").innerHTML += arr[i] + ', ';
+      }
+      
+    }
+
+
+
+    function intersect(a, b) {
+      return a.filter(Set.prototype.has, new Set(b));
+}
+
+
+    function capitalize(input) {  
+      return input.toLowerCase().split(' ').map(s => s.charAt(0).toUpperCase() + s.substring(1)).join(' ');  
+  }  
+
+    function clean(key){
+      var temp1 = key.toString();
+      var temp2 = temp1.replace(/[^a-zA-Z ]/g, " ")
+      var temp3 = capitalize(temp2);
+      return temp3;
+
+    }
+
+
+
+
+    var d2s = {'Fungal infection': ['itching', 'skin rash', 'nodal_skin_eruptions', 'dischromic patches'], 'Chronic cholestasis': ['itching', 'vomiting', 'yellowish_skin', 'nausea', 'loss_of_appetite', 'abdominal_pain', 'yellowing_of_eyes'], 'Drug Reaction': ['itching', 'skin_rash', 'stomach_pain', 'burning_micturition', 'spotting urination'], 'Jaundice': ['itching', 'vomiting', 'fatigue', 'weight_loss', 'high_fever', 'yellowish_skin', 'dark_urine', 'abdominal_pain'], 'Chicken pox': ['itching', 'skin_rash', 'fatigue', 'lethargy', 'high_fever', 'headache', 'loss_of_appetite', 'mild_fever', 'swelled_lymph_nodes', 'malaise', 'red_spots_over_body'], 'Hepatitis B': ['itching', 'fatigue', 'lethargy', 'yellowish_skin', 'dark_urine', 'loss_of_appetite', 'abdominal_pain', 'yellow_urine', 'yellowing_of_eyes', 'malaise', 'receiving_blood_transfusion', 'receiving_unsterile_injections'], 'Dengue': ['skin_rash', 'chills', 'joint_pain', 'vomiting', 'fatigue', 'high_fever', 'headache', 'nausea', 'loss_of_appetite', 'pain_behind_the_eyes', 'back_pain', 'malaise', 'muscle_pain', 'red_spots_over_body'], 'Acne': ['skin_rash', 'pus_filled_pimples', 'blackheads', 'scurring'], 'Psoriasis': ['skin_rash', 'joint_pain', 'skin_peeling', 'silver_like_dusting', 'small_dents_in_nails', 'inflammatory_nails'], 'Impetigo': ['skin_rash', 'high_fever', 'blister', 'red_sore_around_nose', 'yellow_crust_ooze'], 'Allergy': ['continuous_sneezing', 'shivering', 'chills', 'watering_from_eyes'], 'Common Cold': ['continuous_sneezing', 'chills', 'fatigue', 'cough', 'high_fever', 'headache', 'swelled_lymph_nodes', 'malaise', 'phlegm', 'throat_irritation', 'redness_of_eyes', 'sinus_pressure', 'runny_nose', 'congestion', 'chest_pain', 'loss_of_smell', 'muscle_pain'], 'Malaria': ['chills', 'vomiting', 'high_fever', 'sweating', 'headache', 'nausea', 'diarrhoea', 'muscle_pain'], 'Typhoid': ['chills', 'vomiting', 'fatigue', 'high_fever', 'headache', 'nausea', 'constipation', 'abdominal_pain', 'diarrhoea', 'toxic_look_(typhos)', 'belly_pain'], 'Tuberculosis': ['chills', 'vomiting', 'fatigue', 'weight_loss', 'cough', 'high_fever', 'breathlessness', 'sweating', 'loss_of_appetite', 'mild_fever', 'yellowing_of_eyes', 'swelled_lymph_nodes', 'malaise', 'phlegm', 'chest_pain', 'blood_in_sputum'], 'Pneumonia': ['chills', 'fatigue', 'cough', 'high_fever', 'breathlessness', 'sweating', 'malaise', 'phlegm', 'chest_pain', 'fast_heart_rate', 'rusty_sputum'], 'hepatitis A': ['joint_pain', 'vomiting', 'yellowish_skin', 'dark_urine', 'nausea', 'loss_of_appetite', 'abdominal_pain', 'diarrhoea', 'mild_fever', 'yellowing_of_eyes', 'muscle_pain'], 'Hepatitis D': ['joint_pain', 'vomiting', 'fatigue', 'yellowish_skin', 'dark_urine', 'nausea', 'loss_of_appetite', 'abdominal_pain', 'yellowing_of_eyes'], 'Hepatitis E': ['joint_pain', 'vomiting', 'fatigue', 'high_fever', 'yellowish_skin', 'dark_urine', 'nausea', 'loss_of_appetite', 'abdominal_pain', 'yellowing_of_eyes', 'acute_liver_failure', 'coma', 'stomach_bleeding'], 'Osteoarthristis': ['joint_pain', 'neck_pain', 'knee_pain', 'hip_joint_pain', 'swelling_joints', 'painful_walking'], 'GERD': ['stomach_pain', 'acidity', 'ulcers_on_tongue', 'vomiting', 'cough', 'chest_pain'], 'Migraine': ['acidity', 'indigestion', 'headache', 'blurred_and_distorted_vision', 'excessive_hunger', 'stiff_neck', 'depression', 'irritability', 'visual_disturbances'], 'AIDS': ['muscle_wasting', 'patches_in_throat', 'high_fever', 'extra_marital_contacts'], 'Peptic ulcer diseae': ['vomiting', 'indigestion', 'loss_of_appetite', 'abdominal_pain', 'passage_of_gases', 'internal_itching'], 'Gastroenteritis': ['vomiting', 'sunken_eyes', 'dehydration', 'diarrhoea'], 'Paralysis (brain hemorrhage)': ['vomiting', 'headache', 'weakness_of_one_body_side', 'altered_sensorium'], 'Alcoholic hepatitis': ['vomiting', 'yellowish_skin', 'abdominal_pain', 'swelling_of_stomach', 'distention_of_abdomen', 'history_of_alcohol_consumption', 'fluid_overload.1'], 'Heart attack': ['vomiting', 'breathlessness', 'sweating', 'chest_pain'], 'Hypoglycemia': ['vomiting', 'fatigue', 'anxiety', 'sweating', 'headache', 'nausea', 'blurred_and_distorted_vision', 'excessive_hunger', 'drying_and_tingling_lips', 'slurred_speech', 'irritability', 'palpitations'], '(vertigo) Paroymsal  Positional Vertigo': ['vomiting', 'headache', 'nausea', 'spinning_movements', 'loss_of_balance', 'unsteadiness'], 'Urinary tract infection': ['burning_micturition', 'bladder_discomfort', 'foul_smell_of urine', 'continuous_feel_of_urine'], 'Diabetes ': ['fatigue', 'weight_loss', 'restlessness', 'lethargy', 'irregular_sugar_level', 'blurred_and_distorted_vision', 'obesity', 'excessive_hunger', 'increased_appetite', 'polyuria'], 'Bronchial Asthma': ['fatigue', 'cough', 'high_fever', 'breathlessness', 'family_history', 'mucoid_sputum'], 'Hepatitis C': ['fatigue', 'yellowish_skin', 'nausea', 'loss_of_appetite', 'yellowing_of_eyes', 'family_history'], 'Varicose veins': ['fatigue', 'cramps', 'bruising', 'obesity', 'swollen_legs', 'swollen_blood_vessels', 'prominent_veins_on_calf'], 'Hypothyroidism': ['fatigue', 'weight_gain', 'cold_hands_and_feets', 'mood_swings', 'lethargy', 'dizziness', 'puffy_face_and_eyes', 'enlarged_thyroid', 'brittle_nails', 'swollen_extremeties', 'depression', 'irritability', 'abnormal_menstruation'], 'Hyperthyroidism': ['fatigue', 'mood_swings', 'weight_loss', 'restlessness', 'sweating', 'diarrhoea', 'fast_heart_rate', 'excessive_hunger', 'muscle_weakness', 'irritability', 'abnormal_menstruation'], 'Hypertension ': ['headache', 'chest_pain', 'dizziness', 'loss_of_balance', 'lack_of_concentration'], 'Cervical spondylosis': ['back_pain', 'weakness_in_limbs', 'neck_pain', 'dizziness', 'loss_of_balance'], 'Dimorphic hemmorhoids(piles)': ['constipation', 'pain_during_bowel_movements', 'pain_in_anal_region', 'bloody_stool', 'irritation_in_anus'], 'Arthritis': ['muscle_weakness', 'stiff_neck', 'swelling_joints', 'movement_stiffness', 'painful_walking']};
+    var s2d = {'itching': ['itching', 'skin rash', 'nodal skin_eruptions', 'dischromic patches', 'itching', 'vomiting', 'yellowish_skin', 'nausea', 'loss_of_appetite', 'abdominal_pain', 'yellowing_of_eyes', 'itching', 'skin_rash', 'stomach_pain', 'burning_micturition', 'spotting urination', 'itching', 'vomiting', 'fatigue', 'weight_loss', 'high_fever', 'yellowish_skin', 'dark_urine', 'abdominal_pain', 'itching', 'skin_rash', 'fatigue', 'lethargy', 'high_fever', 'headache', 'loss_of_appetite', 'mild_fever', 'swelled_lymph_nodes', 'malaise', 'red_spots_over_body', 'itching', 'fatigue', 'lethargy', 'yellowish_skin', 'dark_urine', 'loss_of_appetite', 'abdominal_pain', 'yellow_urine', 'yellowing_of_eyes', 'malaise', 'receiving_blood_transfusion', 'receiving_unsterile_injections'], 'skin_rash': ['itching', 'skin_rash', 'nodal_skin_eruptions', 'dischromic patches', 'itching', 'skin_rash', 'stomach_pain', 'burning_micturition', 'spotting urination', 'itching', 'skin_rash', 'fatigue', 'lethargy', 'high_fever', 'headache', 'loss_of_appetite', 'mild_fever', 'swelled_lymph_nodes', 'malaise', 'red_spots_over_body', 'skin_rash', 'chills', 'joint_pain', 'vomiting', 'fatigue', 'high_fever', 'headache', 'nausea', 'loss_of_appetite', 'pain_behind_the_eyes', 'back_pain', 'malaise', 'muscle_pain', 'red_spots_over_body', 'skin_rash', 'pus_filled_pimples', 'blackheads', 'scurring', 'skin_rash', 'joint_pain', 'skin_peeling', 'silver_like_dusting', 'small_dents_in_nails', 'inflammatory_nails', 'skin_rash', 'high_fever', 'blister', 'red_sore_around_nose', 'yellow_crust_ooze'], 'nodal_skin_eruptions': ['itching', 'skin_rash', 'nodal_skin_eruptions', 'dischromic patches'], 'continuous_sneezing': ['continuous_sneezing', 'shivering', 'chills', 'watering_from_eyes', 'continuous_sneezing', 'chills', 'fatigue', 'cough', 'high_fever', 'headache', 'swelled_lymph_nodes', 'malaise', 'phlegm', 'throat_irritation', 'redness_of_eyes', 'sinus_pressure', 'runny_nose', 'congestion', 'chest_pain', 'loss_of_smell', 'muscle_pain'], 'shivering': ['continuous_sneezing', 'shivering', 'chills', 'watering_from_eyes'], 'chills': ['continuous_sneezing', 'shivering', 'chills', 'watering_from_eyes', 'chills', 'vomiting', 'high_fever', 'sweating', 'headache', 'nausea', 'diarrhoea', 'muscle_pain', 'skin_rash', 'chills', 'joint_pain', 'vomiting', 'fatigue', 'high_fever', 'headache', 'nausea', 'loss_of_appetite', 'pain_behind_the_eyes', 'back_pain', 'malaise', 'muscle_pain', 'red_spots_over_body', 'chills', 'vomiting', 'fatigue', 'high_fever', 'headache', 'nausea', 'constipation', 'abdominal_pain', 'diarrhoea', 'toxic_look(typhos)', 'belly_pain', 'chills', 'vomiting', 'fatigue', 'weight_loss', 'cough', 'high_fever', 'breathlessness', 'sweating', 'loss_of_appetite', 'mild_fever', 'yellowing_of_eyes', 'swelled_lymph_nodes', 'malaise', 'phlegm', 'chest_pain', 'blood_in_sputum', 'continuous_sneezing', 'chills', 'fatigue', 'cough', 'high_fever', 'headache', 'swelled_lymph_nodes', 'malaise', 'phlegm', 'throat_irritation', 'redness_of_eyes', 'sinus_pressure', 'runny_nose', 'congestion', 'chest_pain', 'loss_of_smell', 'muscle_pain', 'chills', 'fatigue', 'cough', 'high_fever', 'breathlessness', 'sweating', 'malaise', 'phlegm', 'chest_pain', 'fast_heart_rate', 'rusty_sputum'], 'joint_pain': ['skin_rash', 'chills', 'joint_pain', 'vomiting', 'fatigue', 'high_fever', 'headache', 'nausea', 'loss_of_appetite', 'pain_behind_the_eyes', 'back_pain', 'malaise', 'muscle_pain', 'red_spots_over_body', 'joint_pain', 'vomiting', 'yellowish_skin', 'dark_urine', 'nausea', 'loss_of_appetite', 'abdominal_pain', 'diarrhoea', 'mild_fever', 'yellowing_of_eyes', 'muscle_pain', 'joint_pain', 'vomiting', 'fatigue', 'yellowish_skin', 'dark_urine', 'nausea', 'loss_of_appetite', 'abdominal_pain', 'yellowing_of_eyes', 'joint_pain', 'vomiting', 'fatigue', 'high_fever', 'yellowish_skin', 'dark_urine', 'nausea', 'loss_of_appetite', 'abdominal_pain', 'yellowing_of_eyes', 'acute_liver_failure', 'coma', 'stomach_bleeding', 'joint_pain', 'neck_pain', 'knee_pain', 'hip_joint_pain', 'swelling_joints', 'painful_walking', 'skin_rash', 'joint_pain', 'skin_peeling', 'silver_like_dusting', 'small_dents_in_nails', 'inflammatory_nails'], 'stomach_pain': ['stomach_pain', 'acidity', 'ulcers_on_tongue', 'vomiting', 'cough', 'chest_pain', 'itching', 'skin_rash', 'stomach_pain', 'burning_micturition', 'spotting_ urination'], 'acidity': ['stomach_pain', 'acidity', 'ulcers_on_tongue', 'vomiting', 'cough', 'chest_pain', 'acidity', 'indigestion', 'headache', 'blurred_and_distorted_vision', 'excessive_hunger', 'stiff_neck', 'depression', 'irritability', 'visual_disturbances'], 'ulcers_on_tongue': ['stomach_pain', 'acidity', 'ulcers_on_tongue', 'vomiting', 'cough', 'chest_pain'], 'muscle_wasting': ['muscle_wasting', 'patches_in_throat', 'high_fever', 'extra_marital_contacts'], 'vomiting': ['stomach_pain', 'acidity', 'ulcers_on_tongue', 'vomiting', 'cough', 'chest_pain', 'itching', 'vomiting', 'yellowish_skin', 'nausea', 'loss_of_appetite', 'abdominal_pain', 'yellowing_of_eyes', 'vomiting', 'indigestion', 'loss_of_appetite', 'abdominal_pain', 'passage_of_gases', 'internal_itching', 'vomiting', 'sunken_eyes', 'dehydration', 'diarrhoea', 'vomiting', 'headache', 'weakness_of_one_body_side', 'altered_sensorium', 'itching', 'vomiting', 'fatigue', 'weight_loss', 'high_fever', 'yellowish_skin', 'dark_urine', 'abdominal_pain', 'chills', 'vomiting', 'high_fever', 'sweating', 'headache', 'nausea', 'diarrhoea', 'muscle_pain', 'skin_rash', 'chills', 'joint_pain', 'vomiting', 'fatigue', 'high_fever', 'headache', 'nausea', 'loss_of_appetite', 'pain_behind_the_eyes', 'back_pain', 'malaise', 'muscle_pain', 'red_spots_over_body', 'chills', 'vomiting', 'fatigue', 'high_fever', 'headache', 'nausea', 'constipation', 'abdominal_pain', 'diarrhoea', 'toxic_look_(typhos)', 'belly_pain', 'joint_pain', 'vomiting', 'yellowish_skin', 'dark_urine', 'nausea', 'loss_of_appetite', 'abdominal_pain', 'diarrhoea', 'mild_fever', 'yellowing_of_eyes', 'muscle_pain', 'joint_pain', 'vomiting', 'fatigue', 'yellowish_skin', 'dark_urine', 'nausea', 'loss_of_appetite', 'abdominal_pain', 'yellowing_of_eyes', 'joint_pain', 'vomiting', 'fatigue', 'high_fever', 'yellowish_skin', 'dark_urine', 'nausea', 'loss_of_appetite', 'abdominal_pain', 'yellowing_of_eyes', 'acute_liver_failure', 'coma', 'stomach_bleeding', 'vomiting', 'yellowish_skin', 'abdominal_pain', 'swelling_of_stomach', 'distention_of_abdomen', 'history_of_alcohol_consumption', 'fluid_overload.1', 'chills', 'vomiting', 'fatigue', 'weight_loss', 'cough', 'high_fever', 'breathlessness', 'sweating', 'loss_of_appetite', 'mild_fever', 'yellowing_of_eyes', 'swelled_lymph_nodes', 'malaise', 'phlegm', 'chest_pain', 'blood_in_sputum', 'vomiting', 'breathlessness', 'sweating', 'chest_pain', 'vomiting', 'fatigue', 'anxiety', 'sweating', 'headache', 'nausea', 'blurred_and_distorted_vision', 'excessive_hunger', 'drying_and_tingling_lips', 'slurred_speech', 'irritability', 'palpitations', 'vomiting', 'headache', 'nausea', 'spinning_movements', 'loss_of_balance', 'unsteadiness'],
+              'burning_micturition': ['itching', 'skin_rash', 'stomach_pain', 'burning_micturition', 'spotting_urination', 'burning_micturition', 'bladder_discomfort', 'foul_smell_of urine', 'continuous_feel_of_urine'], 'spotting_ urination': ['itching', 'skin_rash', 'stomach_pain', 'burning_micturition', 'spotting_ urination'], 'fatigue': ['fatigue', 'weight_loss', 'restlessness', 'lethargy', 'irregular_sugar_level', 'blurred_and_distorted_vision', 'obesity', 'excessive_hunger', 'increased_appetite', 'polyuria', 'fatigue', 'cough', 'high_fever', 'breathlessness', 'family_history', 'mucoid_sputum', 'itching', 'vomiting', 'fatigue', 'weight_loss', 'high_fever', 'yellowish_skin', 'dark_urine', 'abdominal_pain', 'itching', 'skin_rash', 'fatigue', 'lethargy', 'high_fever', 'headache', 'loss_of_appetite', 'mild_fever', 'swelled_lymph_nodes', 'malaise', 'red_spots_over_body', 'skin_rash', 'chills', 'joint_pain', 'vomiting', 'fatigue', 'high_fever', 'headache', 'nausea', 'loss_of_appetite', 'pain_behind_the_eyes', 'back_pain', 'malaise', 'muscle_pain', 'red_spots_over_body', 'chills', 'vomiting', 'fatigue', 'high_fever', 'headache', 'nausea', 'constipation', 'abdominal_pain', 'diarrhoea', 'toxic_look_(typhos)', 'belly_pain', 'itching', 'fatigue', 'lethargy', 'yellowish_skin', 'dark_urine', 'loss_of_appetite', 'abdominal_pain', 'yellow_urine', 'yellowing_of_eyes', 'malaise', 'receiving_blood_transfusion', 'receiving_unsterile_injections', 'fatigue', 'yellowish_skin', 'nausea', 'loss_of_appetite', 'yellowing_of_eyes', 'family_history', 'joint_pain', 'vomiting', 'fatigue', 'yellowish_skin', 'dark_urine', 'nausea', 'loss_of_appetite', 'abdominal_pain', 'yellowing_of_eyes', 'joint_pain', 'vomiting', 'fatigue', 'high_fever', 'yellowish_skin', 'dark_urine', 'nausea', 'loss_of_appetite', 'abdominal_pain', 'yellowing_of_eyes', 'acute_liver_failure', 'coma', 'stomach_bleeding', 'chills', 'vomiting', 'fatigue', 'weight_loss', 'cough', 'high_fever', 'breathlessness', 'sweating', 'loss_of_appetite', 'mild_fever', 'yellowing_of_eyes', 'swelled_lymph_nodes', 'malaise', 'phlegm', 'chest_pain', 'blood_in_sputum', 'continuous_sneezing', 'chills', 'fatigue', 'cough', 'high_fever', 'headache', 'swelled_lymph_nodes', 'malaise', 'phlegm', 'throat_irritation', 'redness_of_eyes', 'sinus_pressure', 'runny_nose', 'congestion', 'chest_pain', 'loss_of_smell', 'muscle_pain', 'chills', 'fatigue', 'cough', 'high_fever', 'breathlessness', 'sweating', 'malaise', 'phlegm', 'chest_pain', 'fast_heart_rate', 'rusty_sputum', 'fatigue', 'cramps', 'bruising', 'obesity', 'swollen_legs', 'swollen_blood_vessels', 'prominent_veins_on_calf', 'fatigue', 'weight_gain', 'cold_hands_and_feets', 'mood_swings', 'lethargy', 'dizziness', 'puffy_face_and_eyes', 'enlarged_thyroid', 'brittle_nails', 'swollen_extremeties', 'depression', 'irritability', 'abnormal_menstruation', 'fatigue', 'mood_swings', 'weight_loss', 'restlessness', 's  weating', 'diarrhoea', 'fast_heart_rate', 'excessive_hunger', 'muscle_weakness', 'irritability', 'abnormal_menstruation', 'vomiting', 'fatigue', 'anxiety', 'sweating', 'headache', 'nausea', 'blurred_and_distorted_vision', 'excessive_hunger', 'drying_and_tingling_lips', 'slurred_speech', 'irritability', 'palpitations'], 'weight_gain': ['fatigue', 'weight_gain', 'cold_hands_and_feets', 'mood_swings', 'lethargy', 'dizziness', 'puffy_face_and_eyes', 'enlarged_thyroid', 'brittle_nails', 'swollen_extremeties', 'depression', 'irritability', 'abnormal_menstruation'], 'anxiety': ['vomiting', 'fatigue', 'anxiety', 'sweating', 'headache', 'nausea', 'blurred_and_distorted_vision', 'excessive_hunger', 'drying_and_tingling_lips', 'slurred_speech', 'irritability', 'palpitations'], 'cold_hands_and_feets': ['fatigue', 'weight_gain', 'cold_hands_and_feets', 'mood_swings', 'lethargy', 'dizziness', 'puffy_face_and_eyes', 'enlarged_thyroid', 'brittle_nails', 'swollen_extremeties', 'depression', 'irritability', 'abnormal_menstruation'], 'mood_swings': ['fatigue', 'weight_gain', 'cold_hands_and_feets', 'mood_swings', 'lethargy', 'dizziness', 'puffy_face_and_eyes', 'enlarged_thyroid', 'brittle_nails', 'swollen_extremeties', 'depression', 'irritability', 'abnormal_menstruation', 'fatigue', 'mood_swings', 'weight_loss', 'restlessness', 'sweating', 'diarrhoea', 'fast_heart_rate', 'excessive_hunger', 'muscle_weakness', 'irritability', 'abnormal_menstruation'], 'weight_loss': ['fatigue', 'weight_loss', 'restlessness', 'lethargy', 'irregular_sugar_level', 'blurred_and_distorted_vision', 'obesity', 'excessive_hunger', 'increased_appetite', 'polyuria', 'itching', 'vomiting', 'fatigue', 'weight_loss', 'high_fever', 'yellowish_skin', 'dark_urine', 'abdominal_pain', 'chills', 'vomiting', 'fatigue', 'weight_loss', 'cough', 'high_fever', 'breathlessness', 'sweating', 'loss_of_appetite', 'mild_fever', 'yellowing_of_eyes', 'swelled_lymph_nodes', 'malaise', 'phlegm', 'chest_pain', 'blood_in_sputum', 'fatigue', 'mood_swings', 'weight_loss', 'restlessness', 'sweating', 'diarrhoea', 'fast_heart_rate', 'excessive_hunger', 'muscle_weakness', 'irritability', 'abnormal_menstruation'], 'restlessness': ['fatigue', 'weight_loss', 'restlessness', 'lethargy', 'irregular_sugar_level', 'blurred_and_distorted_vision', 'obesity', 'excessive_hunger', 'increased_appetite', 'polyuria', 'fatigue', 'mood_swings', 'weight_loss', 'restlessness', 'sweating', 'diarrhoea', 'fast_heart_rate', 'excessive_hunger', 'muscle_weakness', 'irritability', 'abnormal_menstruation'], 'lethargy': ['fatigue', 'weight_loss', 'restlessness', 'lethargy', 'irregular_sugar_level', 'blurred_and_distorted_vision', 'obesity', 'excessive_hunger', 'increased_appetite', 'polyuria', 'itching', 'skin_rash', 'fatigue', 'lethargy', 'high_fever', 'headache', 'loss_of_appetite', 'mild_fever', 'swelled_lymph_nodes', 'malaise', 'red_spots_over_body', 'itching', 'fatigue', 'lethargy', 'yellowish_skin', 'dark_urine', 'loss_of_appetite', 'abdominal_pain', 'yellow_urine', 'yellowing_of_eyes', 'malaise', 'receiving_blood_transfusion', 'receiving_unsterile_injections', 'fatigue', 'weight_gain', 'cold_hands_and_feets', 'mood_swings', 'lethargy', 'dizziness', 'puffy_face_and_eyes', 'enlarged_thyroid', 'brittle_nails', 'swollen_extremeties', 'depression', 'irritability', 'abnormal_menstruation'], 'patches_in_throat': ['muscle_wasting', 'patches_in_throat', 'high_fever', 'extra_marital_contacts'], 'irregular_sugar_level': ['fatigue', 'weight_loss', 'restlessness', 'lethargy', 'irregular_sugar_level', 'blurred_and_distorted_vision', 'obesity', 'excessive_hunger', 'increased_appetite', 'polyuria'], 'cough': ['stomach_pain', 'acidity', 'ulcers_on_tongue', 'vomiting', 'cough', 'chest_pain', 'fatigue', 'cough', 'high_fever', 'breathlessness', 'family_history', 'mucoid_sputum', 'chills', 'vomiting', 'fatigue', 'weight_loss', 'cough', 'high_fever', 'breathlessness', 'sweating', 'loss_of_appetite', 'mild_fever', 'yellowing_of_eyes', 'swelled_lymph_nodes', 'malaise', 'phlegm', 'chest_pain', 'blood_in_sputum', 'continuous_sneezing', 'chills', 'fatigue', 'cough', 'high_fever', 'headache', 'swelled_lymph_nodes', 'malaise', 'phlegm', 'throat_irritation', 'redness_of_eyes', 'sinus_pressure', 'runny_nose', 'congestion', 'chest_pain', 'loss_of_smell', 'muscle_pain', 'chills', 'fatigue', 'cough', 'high_fever', 'breathlessness', 'sweating', 'malaise', 'phlegm', 'chest_pain', 'fast_heart_rate', 'rusty_sputum'], 'high_fever': ['muscle_wasting', 'patches_in_throat', 'high_fever', 'extra_marital_contacts', 'fatigue', 'cough', 'high_fever', 'breathlessness', 'family_history', 'mucoid_sputum', 'itching', 'vomiting', 'fatigue', 'weight_loss', 'high_fever', 'yellowish_skin', 'dark_urine', 'abdominal_pain', 'chills', 'vomiting', 'high_fever', 'sweating', 'headache', 'nausea', 'diarrhoea', 'muscle_pain', 'itching', 'skin_rash', 'fatigue', 'lethargy', 'high_fever', 'headache', 'loss_of_appetite', 'mild_fever', 'swelled_lymph_nodes', 'malaise', 'red_spots_over_body', 'skin_rash', 'chills', 'joint_pain', 'vomiting', 'fatigue', 'high_fever', 'headache', 'nausea', 'loss_of_appetite', 'pain_behind_the_eyes', 'back_pain', 'malaise', 'muscle_pain', 'red_spots_over_body', 'chills', 'vomiting', 'fatigue', 'high_fever', 'headache', 'nausea', 'constipation', 'abdominal_pain', 'diarrhoea', 'toxic_look_(typhos)', 'belly_pain', 'joint_pain', 'vomiting', 'fatigue', 'high_fever', 'yellowish_skin', 'dark_urine', 'nausea', 'loss_of_appetite', 'abdominal_pain', 'yellowing_of_eyes', 'acute_liver_failure', 'coma', 'stomach_bleeding', 'chills', 'vomiting', 'fatigue', 'weight_loss', 'cough', 'high_fever', 'breathlessness', 'sweating', 'loss_of_appetite', 'mild_fever', 'yellowing_of_eyes', 'swelled_lymph_nodes', 'malaise', 'phlegm', 'chest_pain', 'blood_in_sputum', 'continuous_sneezing', 'chills', 'fatigue', 'cough', 'high_fever', 'headache', 'swelled_lymph_nodes', 'malaise', 'phlegm', 'throat_irritation', 'redness_of_eyes', 'sinus_pressure', 'runny_nose', 'congestion', 'chest_pain', 'loss_of_smell', 'muscle_pain', 'chills', 'fatigue', 'cough', 'high_fever', 'breathlessness', 'sweating', 'malaise', 'phlegm', 'chest_pain', 'fast_heart_rate', 'rusty_sputum', 'skin_rash', 'high_fever', 'blister', 'red_sore_around_nose', 'yellow_crust_ooze'],
+               'sunken_eyes': ['vomiting', 'sunken_eyes', 'dehydration', 'diarrhoea'], 'breathlessness': ['fatigue', 'cough', 'high_fever', 'breathlessness', 'family_history', 'mucoid_sputum', 'chills', 'vomiting', 'fatigue', 'weight_loss', 'cough', 'high_fever', 'breathlessness', 'sweating', 'loss_of_appetite', 'mild_fever', 'yellowing_of_eyes', 'swelled_lymph_nodes', 'malaise', 'phlegm', 'chest_pain', 'blood_in_sputum', 'chills', 'fatigue', 'cough', 'high_fever', 'breathlessness', 'sweating', 'malaise', 'phlegm', 'chest_pain', 'fast_heart_rate', 'rusty_sputum', 'vomiting', 'breathlessness', 'sweating', 'chest_pain'], 'sweating': ['chills', 'vomiting', 'high_fever', 'sweating', 'headache', 'nausea', 'diarrhoea', 'muscle_pain', 'chills', 'vomiting', 'fatigue', 'weight_loss', 'cough', 'high_fever', 'breathlessness', 'sweating', 'loss_of_appetite', 'mild_fever', 'yellowing_of_eyes', 'swelled_lymph_nodes', 'malaise', 'phlegm', 'chest_pain', 'blood_in_sputum', 'chills', 'fatigue', 'cough', 'high_fever', 'breathlessness', 'sweating', 'malaise', 'phlegm', 'chest_pain', 'fast_heart_rate', 'rusty_sputum', 'vomiting', 'breathlessness', 'sweating', 'chest_pain', 'fatigue', 'mood_swings', 'weight_loss', 'restlessness', 'sweating', 'diarrhoea', 'fast_heart_rate', 'excessive_hunger', 'muscle_weakness', 'irritability', 'abnormal_menstruation', 'vomiting', 'fatigue', 'anxiety', 'sweating', 'headache', 'nausea', 'blurred_and_distorted_vision', 'excessive_hunger', 'drying_and_tingling_lips', 'slurred_speech', 'irritability', 'palpitations'], 'dehydration': ['vomiting', 'sunken_eyes', 'dehydration', 'diarrhoea'], 'indigestion': ['vomiting', 'indigestion', 'loss_of_appetite', 'abdominal_pain', 'passage_of_gases', 'internal_itching', 'acidity', 'indigestion', 'headache', 'blurred_and_distorted_vision', 'excessive_hunger', 'stiff_neck', 'depression', 'irritability', 'visual_disturbances'], 'headache': ['headache', 'chest_pain', 'dizziness', 'loss_of_balance', 'lack_of_concentration', 'acidity', 'indigestion', 'headache', 'blurred_and_distorted_vision', 'excessive_hunger', 'stiff_neck', 'depression', 'irritability', 'visual_disturbances', 'vomiting', 'headache', 'weakness_of_one_body_side', 'altered_sensorium', 'chills', 'vomiting', 'high_fever', 'sweating', 'headache', 'nausea', 'diarrhoea', 'muscle_pain', 'itching', 'skin_rash', 'fatigue', 'lethargy', 'high_fever', 'headache', 'loss_of_appetite', 'mild_fever', 'swelled_lymph_nodes', 'malaise', 'red_spots_over_body', 'skin_rash', 'chills', 'joint_pain', 'vomiting', 'fatigue', 'high_fever', 'headache', 'nausea', 'loss_of_appetite', 'pain_behind_the_eyes', 'back_pain', 'malaise', 'muscle_pain', 'red_spots_over_body', 'chills', 'vomiting', 'fatigue', 'high_fever', 'headache', 'nausea', 'constipation', 'abdominal_pain', 'diarrhoea', 'toxic_look_(typhos)', 'belly_pain', 'continuous_sneezing', 'chills', 'fatigue', 'cough', 'high_fever', 'headache', 'swelled_lymph_nodes', 'malaise', 'phlegm', 'throat_irritation', 'redness_of_eyes', 'sinus_pressure', 'runny_nose', 'congestion', 'chest_pain', 'loss_of_smell', 'muscle_pain', 'vomiting', 'fatigue', 'anxiety', 'sweating', 'headache', 'nausea', 'blurred_and_distorted_vision', 'excessive_hunger', 'drying_and_tingling_lips', 'slurred_speech', 'irritability', 'palpitations', 'vomiting', 'headache', 'nausea', 'spinning_movements', 'loss_of_balance', 'unsteadiness'], 'yellowish_skin': ['itching', 'vomiting', 'yellowish_skin', 'nausea', 'loss_of_appetite', 'abdominal_pain', 'yellowing_of_eyes', 'itching', 'vomiting', 'fatigue', 'weight_loss', 'high_fever', 'yellowish_skin', 'dark_urine', 'abdominal_pain', 'joint_pain', 'vomiting', 'yellowish_skin', 'dark_urine', 'nausea', 'loss_of_appetite', 'abdominal_pain', 'diarrhoea', 'mild_fever', 'yellowing_of_eyes', 'muscle_pain', 'itching', 'fatigue', 'lethargy', 'yellowish_skin', 'dark_urine', 'loss_of_appetite', 'abdominal_pain', 'yellow_urine', 'yellowing_of_eyes', 'malaise', 'receiving_blood_transfusion', 'receiving_unsterile_injections', 'fatigue', 'yellowish_skin', 'nausea', 'loss_of_appetite', 'yellowing_of_eyes', 'family_history', 'joint_pain', 'vomiting', 'fatigue', 'yellowish_skin', 'dark_urine', 'nausea', 'loss_of_appetite', 'abdominal_pain', 'yellowing_of_eyes', 'joint_pain', 'vomiting', 'fatigue', 'high_fever', 'yellowish_skin', 'dark_urine', 'nausea', 'loss_of_appetite', 'abdominal_pain', 'yellowing_of_eyes', 'acute_liver_failure', 'coma', 'stomach_bleeding', 'vomiting', 'yellowish_skin', 'abdominal_pain', 'swelling_of_stomach', 'distention_of_abdomen', 'history_of_alcohol_consumption', 'fluid_overload.1'], 'dark_urine': ['itching', 'vomiting', 'fatigue', 'weight_loss', 'high_fever', 'yellowish_skin', 'dark_urine', 'abdominal_pain', 'joint_pain', 'vomiting', 'yellowish_skin', 'dark_urine', 'nausea', 'loss_of_appetite', 'abdominal_pain', 'diarrhoea', 'mild_fever', 'yellowing_of_eyes', 'muscle_pain', 'itching', 'fatigue', 'lethargy', 'yellowish_skin', 'dark_urine', 'loss_of_appetite', 'abdominal_pain', 'yellow_urine', 'yellowing_of_eyes', 'malaise', 'receiving_blood_transfusion', 'receiving_unsterile_injections', 'joint_pain', 'vomiting', 'fatigue', 'yellowish_skin', 'dark_urine', 'nausea', 'loss_of_appetite', 'abdominal_pain', 'yellowing_of_eyes', 'joint_pain', 'vomiting', 'fatigue', 'high_fever', 'yellowish_skin', 'dark_urine', 'nausea', 'loss_of_appetite', 'abdominal_pain', 'yellowing_of_eyes', 'acute_liver_failure', 'coma', 'stomach_bleeding'], 'nausea': ['itching', 'vomiting', 'yellowish_skin', 'nausea', 'loss_of_appetite', 'abdominal_pain', 'yellowing_of_eyes', 'chills', 'vomiting', 'high_fever', 'sweating', 'headache', 'nausea', 'diarrhoea', 'muscle_pain', 'skin_rash', 'chills', 'joint_pain', 'vomiting', 'fatigue', 'high_fever', 'headache', 'nausea', 'loss_of_appetite', 'pain_behind_the_eyes', 'back_pain', 'malaise', 'muscle_pain', 'red_spots_over_body', 'chills', 'vomiting', 'fatigue', 'high_fever', 'headache', 'nausea', 'constipation', 'abdominal_pain', 'diarrhoea', 'toxic_look_(typhos)', 'belly_pain', 'joint_pain', 'vomiting', 'yellowish_skin', 'dark_urine', 'nausea', 'loss_of_appetite', 'abdominal_pain', 'diarrhoea', 'mild_fever', 'yellowing_of_eyes', 'muscle_pain', 'fatigue', 'yellowish_skin', 'nausea', 'loss_of_appetite', 'yellowing_of_eyes', 'family_history', 'joint_pain', 'vomiting', 'fatigue', 'yellowish_skin', 'dark_urine', 'nausea', 'loss_of_appetite', 'abdominal_pain', 'yellowing_of_eyes', 'joint_pain', 'vomiting', 'fatigue', 'high_fever', 'yellowish_skin', 'dark_urine', 'nausea', 'loss_of_appetite', 'abdominal_pain', 'yellowing_of_eyes', 'acute_liver_failure', 'coma', 'stomach_bleeding', 'vomiting', 'fatigue', 'anxiety', 'sweating', 'headache', 'nausea', 'blurred_and_distorted_vision', 'excessive_hunger', 'drying_and_tingling_lips', 'slurred_speech', 'irritability', 'palpitations', 'vomiting', 'headache', 'nausea', 'spinning_movements', 'loss_of_balance', 'unsteadiness'], 'loss_of_appetite': ['itching', 'vomiting', 'yellowish_skin', 'nausea', 'loss_of_appetite', 'abdominal_pain', 'yellowing_of_eyes', 'vomiting', 'indigestion', 'loss_of_appetite', 'abdominal_pain', 'passage_of_gases', 'internal_itching', 'itching', 'skin_rash', 'fatigue', 'lethargy', 'high_fever', 'headache', 'loss_of_appetite', 'mild_fever', 'swelled_lymph_nodes', 'malaise', 'red_spots_over_body', 'skin_rash', 'chills', 'joint_pain', 'vomiting', 'fatigue', 'high_fever', 'headache', 'nausea', 'loss_of_appetite', 'pain_behind_the_eyes', 'back_pain', 'malaise', 'muscle_pain', 'red_spots_over_body', 'joint_pain', 'vomiting', 'yellowish_skin', 'dark_urine', 'nausea', 'loss_of_appetite', 'abdominal_pain', 'diarrhoea', 'mild_fever', 'yellowing_of_eyes', 'muscle_pain', 'itching', 'fatigue', 'lethargy', 'yellowish_skin', 'dark_urine', 'loss_of_appetite', 'abdominal_pain', 'yellow_urine', 'yellowing_of_eyes', 'malaise', 'receiving_blood_transfusion', 'receiving_unsterile_injections', 'fatigue', 'yellowish_skin', 'nausea', 'loss_of_appetite', 'yellowing_of_eyes', 'family_history', 'joint_pain', 'vomiting', 'fatigue', 'yellowish_skin', 'dark_urine', 'nausea', 'loss_of_appetite', 'abdominal_pain', 'yellowing_of_eyes', 'joint_pain', 'vomiting', 'fatigue', 'high_fever', 'yellowish_skin', 'dark_urine', 'nausea', 'loss_of_appetite', 'abdominal_pain', 'yellowing_of_eyes', 'acute_liver_failure', 'coma', 'stomach_bleeding', 'chills', 'vomiting', 'fatigue', 'weight_loss', 'cough', 'high_fever', 'breathlessness', 'sweating', 'loss_of_appetite', 'mild_fever', 'yellowing_of_eyes', 'swelled_lymph_nodes', 'malaise', 'phlegm', 'chest_pain', 'blood_in_sputum'], 'pain_behind_the_eyes': ['skin_rash', 'chills', 'joint_pain', 'vomiting', 'fatigue', 'high_fever', 'headache', 'nausea', 'loss_of_appetite', 'pain_behind_the_eyes', 'back_pain', 'malaise', 'muscle_pain', 'red_spots_over_body'], 'back_pain': ['back_pain', 'weakness_in_limbs', 'neck_pain', 'dizziness', 'loss_of_balance', 'skin_rash', 'chills', 'joint_pain', 'vomiting', 'fatigue', 'high_fever', 'headache', 'nausea', 'loss_of_appetite', 'pain_behind_the_eyes', 'back_pain', 'malaise', 'muscle_pain', 'red_spots_over_body'], 'constipation': ['chills', 'vomiting', 'fatigue', 'high_fever', 'headache', 'nausea', 'constipation', 'abdominal_pain', 'diarrhoea', 'toxic_look_(typhos)', 'belly_pain', 'constipation', 'pain_during_bowel_movements', 'pain_in_anal_region', 'bloody_stool', 'irritation_in_anus'], 
+               'abdominal_pain': ['itching', 'vomiting', 'yellowish_skin', 'nausea', 'loss_of_appetite', 'abdominal_pain', 'yellowing_of_eyes', 'vomiting', 'indigestion', 'loss_of_appetite', 'abdominal_pain', 'passage_of_gases', 'internal_itching', 'itching', 'vomiting', 'fatigue', 'weight_loss', 'high_fever', 'yellowish_skin', 'dark_urine', 'abdominal_pain', 'chills', 'vomiting', 'fatigue', 'high_fever', 'headache', 'nausea', 'constipation', 'abdominal_pain', 'diarrhoea', 'toxic_look_(typhos)', 'belly_pain', 'joint_pain', 'vomiting', 'yellowish_skin', 'dark_urine', 'nausea', 'loss_of_appetite', 'abdominal_pain', 'diarrhoea', 'mild_fever', 'yellowing_of_eyes', 'muscle_pain', 'itching', 'fatigue', 'lethargy', 'yellowish_skin', 'dark_urine', 'loss_of_appetite', 'abdominal_pain', 'yellow_urine', 'yellowing_of_eyes', 'malaise', 'receiving_blood_transfusion', 'receiving_unsterile_injections', 'joint_pain', 'vomiting', 'fatigue', 'yellowish_skin', 'dark_urine', 'nausea', 'loss_of_appetite', 'abdominal_pain', 'yellowing_of_eyes', 'joint_pain', 'vomiting', 'fatigue', 'high_fever', 'yellowish_skin', 'dark_urine', 'nausea', 'loss_of_appetite', 'abdominal_pain', 'yellowing_of_eyes', 'acute_liver_failure', 'coma', 'stomach_bleeding', 'vomiting', 'yellowish_skin', 'abdominal_pain', 'swelling_of_stomach', 'distention_of_abdomen', 'history_of_alcohol_consumption', 'fluid_overload.1'], 'diarrhoea': ['vomiting', 'sunken_eyes', 'dehydration', 'diarrhoea', 'chills', 'vomiting', 'high_fever', 'sweating', 'headache', 'nausea', 'diarrhoea', 'muscle_pain', 'chills', 'vomiting', 'fatigue', 'high_fever', 'headache', 'nausea', 'constipation', 'abdominal_pain', 'diarrhoea', 'toxic_look_(typhos)', 'belly_pain', 'joint_pain', 'vomiting', 'yellowish_skin', 'dark_urine', 'nausea', 'loss_of_appetite', 'abdominal_pain', 'diarrhoea', 'mild_fever', 'yellowing_of_eyes', 'muscle_pain', 'fatigue', 'mood_swings', 'weight_loss', 'restlessness', 'sweating', 'diarrhoea', 'fast_heart_rate', 'excessive_hunger', 'muscle_weakness', 'irritability', 'abnormal_menstruation'], 'mild_fever': ['itching', 'skin_rash', 'fatigue', 'lethargy', 'high_fever', 'headache', 'loss_of_appetite', 'mild_fever', 'swelled_lymph_nodes', 'malaise', 'red_spots_over_body', 'joint_pain', 'vomiting', 'yellowish_skin', 'dark_urine', 'nausea', 'loss_of_appetite', 'abdominal_pain', 'diarrhoea', 'mild_fever', 'yellowing_of_eyes', 'muscle_pain', 'chills', 'vomiting', 'fatigue', 'weight_loss', 'cough', 'high_fever', 'breathlessness', 'sweating', 'loss_of_appetite', 'mild_fever', 'yellowing_of_eyes', 'swelled_lymph_nodes', 'malaise', 'phlegm', 'chest_pain', 'blood_in_sputum'], 'yellow_urine': ['itching', 'fatigue', 'lethargy', 'yellowish_skin', 'dark_urine', 'loss_of_appetite', 'abdominal_pain', 'yellow_urine', 'yellowing_of_eyes', 'malaise', 'receiving_blood_transfusion', 'receiving_unsterile_injections'], 'yellowing_of_eyes': ['itching', 'vomiting', 'yellowish_skin', 'nausea', 'loss_of_appetite', 'abdominal_pain', 'yellowing_of_eyes', 'joint_pain', 'vomiting', 'yellowish_skin', 'dark_urine', 'nausea', 'loss_of_appetite', 'abdominal_pain', 'diarrhoea', 'mild_fever', 'yellowing_of_eyes', 'muscle_pain', 'itching', 'fatigue', 'lethargy', 'yellowish_skin', 'dark_urine', 'loss_of_appetite', 'abdominal_pain', 'yellow_urine', 'yellowing_of_eyes', 'malaise', 'receiving_blood_transfusion', 'receiving_unsterile_injections', 'fatigue', 'yellowish_skin', 'nausea', 'loss_of_appetite', 'yellowing_of_eyes', 'family_history', 'joint_pain', 'vomiting', 'fatigue', 'yellowish_skin', 'dark_urine', 'nausea', 'loss_of_appetite', 'abdominal_pain', 'yellowing_of_eyes', 'joint_pain', 'vomiting', 'fatigue', 'high_fever', 'yellowish_skin', 'dark_urine', 'nausea', 'loss_of_appetite', 'abdominal_pain', 'yellowing_of_eyes', 'acute_liver_failure', 'coma', 'stomach_bleeding', 'chills', 'vomiting', 'fatigue', 'weight_loss', 'cough', 'high_fever', 'breathlessness', 'sweating', 'loss_of_appetite', 'mild_fever', 'yellowing_of_eyes', 'swelled_lymph_nodes', 'malaise', 'phlegm', 'chest_pain', 'blood_in_sputum'], 'acute_liver_failure': ['joint_pain', 'vomiting', 'fatigue', 'high_fever', 'yellowish_skin', 'dark_urine', 'nausea', 'loss_of_appetite', 'abdominal_pain', 'yellowing_of_eyes', 'acute_liver_failure', 'coma', 'stomach_bleeding'], 'fluid_overload': [], 'swelling_of_stomach': ['vomiting', 'yellowish_skin', 'abdominal_pain', 'swelling_of_stomach', 'distention_of_abdomen', 'history_of_alcohol_consumption', 'fluid_overload.1'], 'swelled_lymph_nodes': ['itching', 'skin_rash', 'fatigue', 'lethargy', 'high_fever', 'headache', 'loss_of_appetite', 'mild_fever', 'swelled_lymph_nodes', 'malaise', 'red_spots_over_body', 'chills', 'vomiting', 'fatigue', 'weight_loss', 'cough', 'high_fever', 'breathlessness', 'sweating', 'loss_of_appetite', 'mild_fever', 'yellowing_of_eyes', 'swelled_lymph_nodes', 'malaise', 'phlegm', 'chest_pain', 'blood_in_sputum', 'continuous_sneezing', 'chills', 'fatigue', 'cough', 'high_fever', 'headache', 'swelled_lymph_nodes', 'malaise', 'phlegm', 'throat_irritation', 'redness_of_eyes', 'sinus_pressure', 'runny_nose', 'congestion', 'chest_pain', 'loss_of_smell', 'muscle_pain'], 'malaise': ['itching', 'skin_rash', 'fatigue', 'lethargy', 'high_fever', 'headache', 'loss_of_appetite', 'mild_fever', 'swelled_lymph_nodes', 'malaise', 'red_spots_over_body', 'skin_rash', 'chills', 'joint_pain', 'vomiting', 'fatigue', 'high_fever', 'headache', 'nausea', 'loss_of_appetite', 'pain_behind_the_eyes', 'back_pain', 'malaise', 'muscle_pain', 'red_spots_over_body', 'itching', 'fatigue', 'lethargy', 'yellowish_skin', 'dark_urine', 'loss_of_appetite', 'abdominal_pain', 'yellow_urine', 'yellowing_of_eyes', 'malaise', 'receiving_blood_transfusion', 'receiving_unsterile_injections', 'chills', 'vomiting', 'fatigue', 'weight_loss', 'cough', 'high_fever', 'breathlessness', 'sweating', 'loss_of_appetite', 'mild_fever', 'yellowing_of_eyes', 'swelled_lymph_nodes', 'malaise', 'phlegm', 'chest_pain', 'blood_in_sputum', 'continuous_sneezing', 'chills', 'fatigue', 'cough', 'high_fever', 'headache', 'swelled_lymph_nodes', 'malaise', 'phlegm', 'throat_irritation', 'redness_of_eyes', 'sinus_pressure', 'runny_nose', 'congestion', 'chest_pain', 'loss_of_smell', 'muscle_pain', 'chills', 'fatigue', 'cough', 'high_fever', 'breathlessness', 'sweating', 'malaise', 'phlegm', 'chest_pain', 'fast_heart_rate', 'rusty_sputum'], 'blurred_and_distorted_vision': ['fatigue', 'weight_loss', 'restlessness', 'lethargy', 'irregular_sugar_level', 'blurred_and_distorted_vision', 'obesity', 'excessive_hunger', 'increased_appetite', 'polyuria', 'acidity', 'indigestion', 'headache', 'blurred_and_distorted_vision', 'excessive_hunger', 'stiff_neck', 'depression', 'irritability', 'visual_disturbances', 'vomiting', 'fatigue', 'anxiety', 'sweating', 'headache', 'nausea', 'blurred_and_distorted_vision', 'excessive_hunger', 'drying_and_tingling_lips', 'slurred_speech', 'irritability', 'palpitations'], 'phlegm': ['chills', 'vomiting', 'fatigue', 'weight_loss', 'cough', 'high_fever', 'breathlessness', 'sweating', 'loss_of_appetite', 'mild_fever', 'yellowing_of_eyes', 'swelled_lymph_nodes', 'malaise', 'phlegm', 'chest_pain', 'blood_in_sputum', 'continuous_sneezing', 'chills', 'fatigue', 'cough', 'high_fever', 'headache', 'swelled_lymph_nodes', 'malaise', 'phlegm', 'throat_irritation', 'redness_of_eyes', 'sinus_pressure', 'runny_nose', 'congestion', 'chest_pain', 'loss_of_smell', 'muscle_pain', 'chills', 'fatigue', 'cough', 'high_fever', 'breathlessness', 'sweating', 'malaise', 'phlegm', 'chest_pain', 'fast_heart_rate', 'rusty_sputum'], 'throat_irritation': ['continuous_sneezing', 'chills', 'fatigue', 'cough', 'high_fever', 'headache', 'swelled_lymph_nodes', 'malaise', 'phlegm', 'throat_irritation', 'redness_of_eyes', 'sinus_pressure', 'runny_nose', 'congestion', 'chest_pain', 'loss_of_smell', 'muscle_pain'], 'redness_of_eyes': ['continuous_sneezing', 'chills', 'fatigue', 'cough', 'high_fever', 'headache', 'swelled_lymph_nodes', 'malaise', 'phlegm', 'throat_irritation', 'redness_of_eyes', 'sinus_pressure', 'runny_nose', 'congestion', 'chest_pain', 'loss_of_smell', 'muscle_pain'], 'sinus_pressure': ['continuous_sneezing', 'chills', 'fatigue', 'cough', 'high_fever', 'headache', 'swelled_lymph_nodes', 'malaise', 'phlegm', 'throat_irritation', 'redness_of_eyes', 'sinus_pressure', 'runny_nose', 'congestion', 'chest_pain', 'loss_of_smell', 'muscle_pain'], 'runny_nose': ['continuous_sneezing', 'chills', 'fatigue', 'cough', 'high_fever', 'headache', 'swelled_lymph_nodes', 'malaise', 'phlegm', 'throat_irritation', 'redness_of_eyes', 'sinus_pressure', 'runny_nose', 'congestion', 'chest_pain', 'loss_of_smell', 'muscle_pain'], 'congestion': ['continuous_sneezing', 'chills', 'fatigue', 'cough', 'high_fever', 'headache', 'swelled_lymph_nodes', 'malaise', 'phlegm', 'throat_irritation', 'redness_of_eyes', 'sinus_pressure', 'runny_nose', 'congestion', 'chest_pain', 'loss_of_smell', 'muscle_pain'], 'chest_pain': ['stomach_pain', 'acidity', 'ulcers_on_tongue', 'vomiting', 'cough', 'chest_pain', 'headache', 'chest_pain', 'dizziness', 'loss_of_balance', 'lack_of_concentration', 'chills', 'vomiting', 'fatigue', 'weight_loss', 'cough', 'high_fever', 'breathlessness', 'sweating', 'loss_of_appetite', 'mild_fever', 'yellowing_of_eyes', 'swelled_lymph_nodes', 'malaise', 'phlegm', 'chest_pain', 'blood_in_sputum', 'continuous_sneezing', 'chills', 'fatigue', 'cough', 'high_fever', 'headache', 'swelled_lymph_nodes', 'malaise', 'phlegm', 'throat_irritation', 'redness_of_eyes', 'sinus_pressure', 'runny_nose', 'congestion', 'chest_pain', 'loss_of_smell', 'muscle_pain', 'chills', 'fatigue', 'cough', 'high_fever', 'breathlessness', 'sweating', 'malaise', 'phlegm', 'chest_pain', 'fast_heart_rate', 'rusty_sputum', 'vomiting', 'breathlessness', 'sweating', 'chest_pain'],
+                'weakness_in_limbs': ['back_pain', 'weakness_in_limbs', 'neck_pain', 'dizziness', 'loss_of_balance'], 'fast_heart_rate': ['chills', 'fatigue', 'cough', 'high_fever', 'breathlessness', 'sweating', 'malaise', 'phlegm', 'chest_pain', 'fast_heart_rate', 'rusty_sputum', 'fatigue', 'mood_swings', 'weight_loss', 'restlessness', 'sweating', 'diarrhoea', 'fast_heart_rate', 'excessive_hunger', 'muscle_weakness', 'irritability', 'abnormal_menstruation'], 'pain_during_bowel_movements': ['constipation', 'pain_during_bowel_movements', 'pain_in_anal_region', 'bloody_stool', 'irritation_in_anus'], 'pain_in_anal_region': ['constipation', 'pain_during_bowel_movements', 'pain_in_anal_region', 'bloody_stool', 'irritation_in_anus'], 'bloody_stool': ['constipation', 'pain_during_bowel_movements', 'pain_in_anal_region', 'bloody_stool', 'irritation_in_anus'], 'irritation_in_anus': ['constipation', 'pain_during_bowel_movements', 'pain_in_anal_region', 'bloody_stool', 'irritation_in_anus'], 'neck_pain': ['back_pain', 'weakness_in_limbs', 'neck_pain', 'dizziness', 'loss_of_balance', 'joint_pain', 'neck_pain', 'knee_pain', 'hip_joint_pain', 'swelling_joints', 'painful_walking'], 'dizziness': ['headache', 'chest_pain', 'dizziness', 'loss_of_balance', 'lack_of_concentration', 'back_pain', 'weakness_in_limbs', 'neck_pain', 'dizziness', 'loss_of_balance', 'fatigue', 'weight_gain', 'cold_hands_and_feets', 'mood_swings', 'lethargy', 'dizziness', 'puffy_face_and_eyes', 'enlarged_thyroid', 'brittle_nails', 'swollen_extremeties', 'depression', 'irritability', 'abnormal_menstruation'], 'cramps': ['fatigue', 'cramps', 'bruising', 'obesity', 'swollen_legs', 'swollen_blood_vessels', 'prominent_veins_on_calf'], 'bruising': ['fatigue', 'cramps', 'bruising', 'obesity', 'swollen_legs', 'swollen_blood_vessels', 'prominent_veins_on_calf'], 'obesity': ['fatigue', 'weight_loss', 'restlessness', 'lethargy', 'irregular_sugar_level', 'blurred_and_distorted_vision', 'obesity', 'excessive_hunger', 'increased_appetite', 'polyuria', 'fatigue', 'cramps', 'bruising', 'obesity', 'swollen_legs', 'swollen_blood_vessels', 'prominent_veins_on_calf'], 'swollen_legs': ['fatigue', 'cramps', 'bruising', 'obesity', 'swollen_legs', 'swollen_blood_vessels', 'prominent_veins_on_calf'], 'swollen_blood_vessels': ['fatigue', 'cramps', 'bruising', 'obesity', 'swollen_legs', 'swollen_blood_vessels', 'prominent_veins_on_calf'], 'puffy_face_and_eyes': ['fatigue', 'weight_gain', 'cold_hands_and_feets', 'mood_swings', 'lethargy', 'dizziness', 'puffy_face_and_eyes', 'enlarged_thyroid', 'brittle_nails', 'swollen_extremeties', 'depression', 'irritability', 'abnormal_menstruation'], 'enlarged_thyroid': ['fatigue', 'weight_gain', 'cold_hands_and_feets', 'mood_swings', 'lethargy', 'dizziness', 'puffy_face_and_eyes', 'enlarged_thyroid', 'brittle_nails', 'swollen_extremeties', 'depression', 'irritability', 'abnormal_menstruation'], 'brittle_nails': ['fatigue', 'weight_gain', 'cold_hands_and_feets', 'mood_swings', 'lethargy', 'dizziness', 'puffy_face_and_eyes', 'enlarged_thyroid', 'brittle_nails', 'swollen_extremeties', 'depression', 'irritability', 'abnormal_menstruation'], 'swollen_extremeties': ['fatigue', 'weight_gain', 'cold_hands_and_feets', 'mood_swings', 'lethargy', 'dizziness', 'puffy_face_and_eyes', 'enlarged_thyroid', 'brittle_nails', 'swollen_extremeties', 'depression', 'irritability', 'abnormal_menstruation'], 'excessive_hunger': ['fatigue', 'weight_loss', 'restlessness', 'lethargy', 'irregular_sugar_level', 'blurred_and_distorted_vision', 'obesity', 'excessive_hunger', 'increased_appetite', 'polyuria', 'acidity', 'indigestion', 'headache', 'blurred_and_distorted_vision', 'excessive_hunger', 'stiff_neck', 'depression', 'irritability', 'visual_disturbances', 'fatigue', 'mood_swings', 'weight_loss', 'restlessness', 'sweating', 'diarrhoea', 'fast_heart_rate', 'excessive_hunger', 'muscle_weakness', 'irritability', 'abnormal_menstruation', 'vomiting', 'fatigue', 'anxiety', 'sweating', 'headache', 'nausea', 'blurred_and_distorted_vision', 'excessive_hunger', 'drying_and_tingling_lips', 'slurred_speech', 'irritability', 'palpitations'], 'extra_marital_contacts': ['muscle_wasting', 'patches_in_throat', 'high_fever', 'extra_marital_contacts'], 'drying_and_tingling_lips': ['vomiting', 'fatigue', 'anxiety', 'sweating', 'headache', 'nausea', 'blurred_and_distorted_vision', 'excessive_hunger', 'drying_and_tingling_lips', 'slurred_speech', 'irritability', 'palpitations'], 'slurred_speech': ['vomiting', 'fatigue', 'anxiety', 'sweating', 'headache', 'nausea', 'blurred_and_distorted_vision', 'excessive_hunger', 'drying_and_tingling_lips', 'slurred_speech', 'irritability', 'palpitations'], 'knee_pain': ['joint_pain', 'neck_pain', 'knee_pain', 'hip_joint_pain', 'swelling_joints', 'painful_walking'], 'hip_joint_pain': ['joint_pain', 'neck_pain', 'knee_pain', 'hip_joint_pain', 'swelling_joints', 'painful_walking'], 'muscle_weakness': ['fatigue', 'mood_swings', 'weight_loss', 'restlessness', 'sweating', 'diarrhoea', 'fast_heart_rate', 'excessive_hunger', 'muscle_weakness', 'irritability', 'abnormal_menstruation', 'muscle_weakness', 'stiff_neck', 'swelling_joints', 'movement_stiffness', 'painful_walking'], 'stiff_neck': ['acidity', 'indigestion', 'headache', 'blurred_and_distorted_vision', 'excessive_hunger', 'stiff_neck', 'depression', 'irritability', 'visual_disturbances', 'muscle_weakness', 'stiff_neck', 'swelling_joints', 'movement_stiffness', 'painful_walking'], 'swelling_joints': ['joint_pain', 'neck_pain', 'knee_pain', 'hip_joint_pain', 'swelling_joints', 'painful_walking', 'muscle_weakness', 'stiff_neck', 'swelling_joints', 'movement_stiffness', 'painful_walking'], 'movement_stiffness': ['muscle_weakness', 'stiff_neck', 'swelling_joints', 'movement_stiffness', 'painful_walking'], 'spinning_movements': ['vomiting', 'headache', 'nausea', 'spinning_movements', 'loss_of_balance', 'unsteadiness'], 'loss_of_balance': ['headache', 'chest_pain', 'dizziness', 'loss_of_balance', 'lack_of_concentration', 'back_pain', 'weakness_in_limbs', 'neck_pain', 'dizziness', 'loss_of_balance', 'vomiting', 'headache', 'nausea', 'spinning_movements', 'loss_of_balance', 'unsteadiness'], 'unsteadiness': ['vomiting', 'headache', 'nausea', 'spinning_movements', 'loss_of_balance', 'unsteadiness'], 'weakness_of_one_body_side': ['vomiting', 'headache', 'weakness_of_one_body_side', 'altered_sensorium'], 'loss_of_smell': ['continuous_sneezing', 'chills', 'fatigue', 'cough', 'high_fever', 'headache', 'swelled_lymph_nodes', 'malaise', 'phlegm', 'throat_irritation', 'redness_of_eyes', 'sinus_pressure', 'runny_nose', 'congestion', 'chest_pain', 'loss_of_smell', 'muscle_pain'], 'bladder_discomfort': ['burning_micturition', 'bladder_discomfort', 'foul_smell_of urine', 'continuous_feel_of_urine'], 'foul_smell_of urine': ['burning_micturition', 'bladder_discomfort', 'foul_smell_of urine', 'continuous_feel_of_urine'], 'continuous_feel_of_urine': ['burning_micturition', 'bladder_discomfort', 'foul_smell_of urine', 'continuous_feel_of_urine'], 'passage_of_gases': ['vomiting', 'indigestion', 'loss_of_appetite', 'abdominal_pain', 'passage_of_gases', 'internal_itching'], 'internal_itching': ['vomiting', 'indigestion', 'loss_of_appetite', 'abdominal_pain', 'passage_of_gases', 'internal_itching'], 'toxic_look_(typhos)': ['chills', 'vomiting', 'fatigue', 'high_fever', 'headache', 'nausea', 'constipation', 'abdominal_pain', 'diarrhoea', 'toxic_look_(typhos)', 'belly_pain'], 'depression': ['acidity', 'indigestion', 'headache', 'blurred_and_distorted_vision', 'excessive_hunger', 'stiff_neck', 'depression', 'irritability', 'visual_disturbances', 'fatigue', 'weight_gain', 'cold_hands_and_feets', 'mood_swings', 'lethargy', 'dizziness', 'puffy_face_and_eyes', 'enlarged_thyroid', 'brittle_nails', 'swollen_extremeties', 'depression', 'irritability', 'abnormal_menstruation'], 'irritability': ['acidity', 'indigestion', 'headache', 'blurred_and_distorted_vision', 'excessive_hunger', 'stiff_neck', 'depression', 'irritability', 'visual_disturbances', 'fatigue', 'weight_gain', 'cold_hands_and_feets', 'mood_swings', 'lethargy', 'dizziness', 'puffy_face_and_eyes', 'enlarged_thyroid', 'brittle_nails', 'swollen_extremeties', 'depression', 'irritability', 'abnormal_menstruation', 'fatigue', 'mood_swings', 'weight_loss', 'restlessness', 'sweating', 'diarrhoea', 'fast_heart_rate', 'excessive_hunger', 'muscle_weakness', 'irritability', 'abnormal_menstruation', 'vomiting', 'fatigue', 'anxiety', 'sweating', 'headache', 'nausea', 'blurred_and_distorted_vision', 'excessive_hunger', 'drying_and_tingling_lips', 'slurred_speech', 'irritability', 'palpitations'], 'muscle_pain': ['chills', 'vomiting', 'high_fever', 'sweating', 'headache', 'nausea', 'diarrhoea', 'muscle_pain', 'skin_rash', 'chills', 'joint_pain', 'vomiting', 'fatigue', 'high_fever', 'headache', 'nausea', 'loss_of_appetite', 'pain_behind_the_eyes', 'back_pain', 'malaise', 'muscle_pain', 'red_spots_over_body', 'joint_pain', 'vomiting', 'yellowish_skin', 'dark_urine', 'nausea', 'loss_of_appetite', 'abdominal_pain', 'diarrhoea', 'mild_fever', 'yellowing_of_eyes', 'muscle_pain', 'continuous_sneezing', 'chills', 'fatigue', 'cough', 'high_fever', 'headache', 'swelled_lymph_nodes', 'malaise', 'phlegm', 'throat_irritation', 'redness_of_eyes', 'sinus_pressure', 'runny_nose', 'congestion', 'chest_pain', 'loss_of_smell', 'muscle_pain'], 'altered_sensorium': ['vomiting', 'headache', 'weakness_of_one_body_side', 'altered_sensorium'], 'red_spots_over_body': ['itching', 'skin_rash', 'fatigue', 'lethargy', 'high_fever', 'headache', 'loss_of_appetite', 'mild_fever', 'swelled_lymph_nodes', 'malaise', 'red_spots_over_body', 'skin_rash', 'chills', 'joint_pain', 'vomiting', 'fatigue', 'high_fever', 'headache', 'nausea', 'loss_of_appetite', 'pain_behind_the_eyes', 'back_pain', 'malaise', 'muscle_pain', 'red_spots_over_body'],
+                 'belly_pain': ['chills', 'vomiting', 'fatigue', 'high_fever', 'headache', 'nausea', 'constipation', 'abdominal_pain', 'diarrhoea', 'toxic_look_(typhos)', 'belly_pain'], 'abnormal_menstruation': ['fatigue', 'weight_gain', 'cold_hands_and_feets', 'mood_swings', 'lethargy', 'dizziness', 'puffy_face_and_eyes', 'enlarged_thyroid', 'brittle_nails', 'swollen_extremeties', 'depression', 'irritability', 'abnormal_menstruation', 'fatigue', 'mood_swings', 'weight_loss', 'restlessness', 'sweating', 'diarrhoea', 'fast_heart_rate', 'excessive_hunger', 'muscle_weakness', 'irritability', 'abnormal_menstruation'], 'dischromic _patches': ['itching', 'skin_rash', 'nodal_skin_eruptions', 'dischromic _patches'], 'watering_from_eyes': ['continuous_sneezing', 'shivering', 'chills', 'watering_from_eyes'], 'increased_appetite': ['fatigue', 'weight_loss', 'restlessness', 'lethargy', 'irregular_sugar_level', 'blurred_and_distorted_vision', 'obesity', 'excessive_hunger', 'increased_appetite', 'polyuria'], 'polyuria': ['fatigue', 'weight_loss', 'restlessness', 'lethargy', 'irregular_sugar_level', 'blurred_and_distorted_vision', 'obesity', 'excessive_hunger', 'increased_appetite', 'polyuria'], 'family_history': ['fatigue', 'cough', 'high_fever', 'breathlessness', 'family_history', 'mucoid_sputum', 'fatigue', 'yellowish_skin', 'nausea', 'loss_of_appetite', 'yellowing_of_eyes', 'family_history'], 'mucoid_sputum': ['fatigue', 'cough', 'high_fever', 'breathlessness', 'family_history', 'mucoid_sputum'], 'rusty_sputum': ['chills', 'fatigue', 'cough', 'high_fever', 'breathlessness', 'sweating', 'malaise', 'phlegm', 'chest_pain', 'fast_heart_rate', 'rusty_sputum'], 'lack_of_concentration': ['headache', 'chest_pain', 'dizziness', 'loss_of_balance', 'lack_of_concentration'], 'visual_disturbances': ['acidity', 'indigestion', 'headache', 'blurred_and_distorted_vision', 'excessive_hunger', 'stiff_neck', 'depression', 'irritability', 'visual_disturbances'], 'receiving_blood_transfusion': ['itching', 'fatigue', 'lethargy', 'yellowish_skin', 'dark_urine', 'loss_of_appetite', 'abdominal_pain', 'yellow_urine', 'yellowing_of_eyes', 'malaise', 'receiving_blood_transfusion', 'receiving_unsterile_injections'], 'receiving_unsterile_injections': ['itching', 'fatigue', 'lethargy', 'yellowish_skin', 'dark_urine', 'loss_of_appetite', 'abdominal_pain', 'yellow_urine', 'yellowing_of_eyes', 'malaise', 'receiving_blood_transfusion', 'receiving_unsterile_injections'], 'coma': ['joint_pain', 'vomiting', 'fatigue', 'high_fever', 'yellowish_skin', 'dark_urine', 'nausea', 'loss_of_appetite', 'abdominal_pain', 'yellowing_of_eyes', 'acute_liver_failure', 'coma', 'stomach_bleeding'], 'stomach_bleeding': ['joint_pain', 'vomiting', 'fatigue', 'high_fever', 'yellowish_skin', 'dark_urine', 'nausea', 'loss_of_appetite', 'abdominal_pain', 'yellowing_of_eyes', 'acute_liver_failure', 'coma', 'stomach_bleeding'], 'distention_of_abdomen': ['vomiting', 'yellowish_skin', 'abdominal_pain', 'swelling_of_stomach', 'distention_of_abdomen', 'history_of_alcohol_consumption', 'fluid_overload.1'], 'history_of_alcohol_consumption': ['vomiting', 'yellowish_skin', 'abdominal_pain', 'swelling_of_stomach', 'distention_of_abdomen', 'history_of_alcohol_consumption', 'fluid_overload.1'], 'fluid_overload.1': ['vomiting', 'yellowish_skin', 'abdominal_pain', 'swelling_of_stomach', 'distention_of_abdomen', 'history_of_alcohol_consumption', 'fluid_overload.1'], 'blood_in_sputum': ['chills', 'vomiting', 'fatigue', 'weight_loss', 'cough', 'high_fever', 'breathlessness', 'sweating', 'loss_of_appetite', 'mild_fever', 'yellowing_of_eyes', 'swelled_lymph_nodes', 'malaise', 'phlegm', 'chest_pain', 'blood_in_sputum'], 'prominent_veins_on_calf': ['fatigue', 'cramps', 'bruising', 'obesity', 'swollen_legs', 'swollen_blood_vessels', 'prominent_veins_on_calf'], 'palpitations': ['vomiting', 'fatigue', 'anxiety', 'sweating', 'headache', 'nausea', 'blurred_and_distorted_vision', 'excessive_hunger', 'drying_and_tingling_lips', 'slurred_speech', 'irritability', 'palpitations'], 'painful_walking': ['joint_pain', 'neck_pain', 'knee_pain', 'hip_joint_pain', 'swelling_joints', 'painful_walking', 'muscle_weakness', 'stiff_neck', 'swelling_joints', 'movement_stiffness', 'painful_walking'], 'pus_filled_pimples': ['skin_rash', 'pus_filled_pimples', 'blackheads', 'scurring'], 'blackheads': ['skin_rash', 'pus_filled_pimples', 'blackheads', 'scurring'], 'scurring': ['skin_rash', 'pus_filled_pimples', 'blackheads', 'scurring'], 'skin_peeling': ['skin_rash', 'joint_pain', 'skin_peeling', 'silver_like_dusting', 'small_dents_in_nails', 'inflammatory_nails'], 'silver_like_dusting': ['skin_rash', 'joint_pain', 'skin_peeling', 'silver_like_dusting', 'small_dents_in_nails', 'inflammatory_nails'], 'small_dents_in_nails': ['skin_rash', 'joint_pain', 'skin_peeling', 'silver_like_dusting', 'small_dents_in_nails', 'inflammatory_nails'], 'inflammatory_nails': ['skin_rash', 'joint_pain', 'skin_peeling', 'silver_like_dusting', 'small_dents_in_nails', 'inflammatory_nails'], 'blister': ['skin_rash', 'high_fever', 'blister', 'red_sore_around_nose', 'yellow_crust_ooze'], 'red_sore_around_nose': ['skin_rash', 'high_fever', 'blister', 'red_sore_around_nose', 'yellow_crust_ooze'], 'yellow_crust_ooze': ['skin_rash', 'high_fever', 'blister', 'red_sore_around_nose', 'yellow_crust_ooze'], 'prognosis': []};
+
+
+    //t has the last selected symptom
+    // console.log(t);
+
+    if(zzz>1){
+      {
+        var parent=document.getElementById("ddlViewBy");
+        var childrens=parent.querySelectorAll('option');
+        var fl = 0;
+        for(var i=0;i<childrens.length;i++){
+          var tttemp = childrens[i].value;
+          for( var ele in recent){
+            if(tttemp == recent[ele]){
+              fl = 1;
+            }
+          }
+          if(fl !=1){
+            cpy.push(optdict2[tttemp]);
+          }
+          // console.log("CPY->" + cpy[i]);
+        }
+      }
+    }
+
+    //Storing related symptoms in temp array
+    for(var key in s2d){
+      var tempp = clean(key);
+  
+      if(tempp == t){
+        var temp = s2d[key]; 
+      }
+    } 
+
+
+    // pusing related symptoms in s2darr
+    for( var ele in temp){
+      var fl1 = 0;
+      var var2 = temp[ele];
+      var tempp = clean(var2);
+      for( var ele in recent){
+            if(tttemp == recent[ele]){
+              fl1 = 1;
+            }
+      }
+      if(fl1!=1){
+      s2darr.push(tempp);
+     }
+    }
+
+    // removing duplicate symptoms by creating set array
+    var uniquearr = [...new Set(s2darr)];
+    uniquearr.sort();
+
+    
+    if(zzz>1){
+      var uniquearrr = [...new Set(uniquearr)];
+      uniquearrr = intersect(cpy,uniquearr);
+      
+      // for(var ele in uniquearrr){
+      //   console.log("intersect = "+uniquearrr[ele]);
+      // }
+      var emp = [...new Set(uniquearrr)];
+      uniquearr = emp;
+      
+      
+    }
+
+    //  for( var ele in uniquearr){
+    //   console.log("Before=" + uniquearr[ele]);
+    // }
+    uniquearr = uniquearr.filter(item => item !== t)  
+    // for( var ele in uniquearr){
+    //   console.log("After=" + uniquearr[ele]);
+    // }
+
+    for(var value in recent){
+      uniquearr = uniquearr.filter(item => item !== recent[value])  
+    }
+    
+
+    // Deleting all previous select values and then updating with new
+    var parent=document.getElementById("ddlViewBy");
+    var childrens=parent.querySelectorAll('option');
+    for(var i=0;i<childrens.length;i++){
+       childrens[i].remove();
+    }
+
+    var mySelect  = document.getElementById("ddlViewBy"); 
+    
+
+    for(var ele in uniquearr){
+
+      for(ele2 in optdict){
+      
+        if(ele2 = uniquearr[ele]){
+          
+          let option = document.createElement('option');
+          option.textContent = uniquearr[ele];
+
+          option.value = optdict[ele2];
+          mySelect.appendChild(option);
+          
+          console.log(ele2 + "-> " + optdict[ele2]);
+          // console.log(uniquearr[ele]);
+          break;
+        }
+      }
+      // option.value = i+1;
+      // mySelect.appendChild(option);
+    }
+
+    for (var ele in recent){
+      console.log(recent[ele]);
+    }
+   
+
+
+
+
+
+
+
+
+    
+}
+
+
+</script>
+<script>
+$(document).ready(function(){
+    $("#results").click(function(){
+        $.ajax({
+            url: '',
+            type: 'get',
+            data: {
+                values: $("#indexes").text()
+            },
+            success: function(response){
+                $("#report").text('Disease found are: ' + response.ans)
+                $("#id1").text(response.dis2)
+                $("#id2").text(response.dis3)
+                $("#id3").text(response.dis1)
+
+                // $("#sas").text('Wakakka')
+            }
+        })
+    })
+})
+
+
+</script>
+<script src = 
+"https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js" >
+        </script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
