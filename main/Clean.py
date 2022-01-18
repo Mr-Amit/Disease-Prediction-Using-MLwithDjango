@@ -7,8 +7,8 @@ from sklearn.svm import SVC
 from sklearn.model_selection import train_test_split
 # from sklearn.metrics import accuracy_score
 import warnings
-from sklearn.exceptions import DataConversionWarning
-warnings.filterwarnings(action='ignore', category=DataConversionWarning)
+with warnings.catch_warnings():
+    warnings.simplefilter("ignore")
 l1= getsymptoms()
 
 disease= getDiseases()

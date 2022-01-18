@@ -1,0 +1,1 @@
+web: guincorn predict.wsgi --log-file -
