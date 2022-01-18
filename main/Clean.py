@@ -5,8 +5,10 @@ from .store import getsymptoms, getDiseases, getReplaceDict
 from sklearn.svm import SVC
 # import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score
-
+# from sklearn.metrics import accuracy_score
+import warnings
+from sklearn.exceptions import DataConversionWarning
+warnings.filterwarnings(action='ignore', category=DataConversionWarning)
 l1= getsymptoms()
 
 disease= getDiseases()
@@ -16,7 +18,7 @@ for x in range(0,len(l1)):
     l2.append(0)
 
 # TESTING DATA and Path
-path = os.getcwd() + '\\main\\'
+path = os.getcwd() + r'\\main\\'
 tr=pd.read_csv(path + "Testing.csv")
 tr.replace(getReplaceDict(),inplace=True)
 
