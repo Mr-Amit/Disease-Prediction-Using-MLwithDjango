@@ -1,1 +1,1 @@
-web: guincorn predict.wsgi --log-file -
+web: gunicorn predict.wsgi --log-file -
