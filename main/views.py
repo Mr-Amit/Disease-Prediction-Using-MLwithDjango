@@ -20,9 +20,9 @@ class AjaxHandler(View):
             # print("\nSSSS",text,"\n")
             sympts = text.split(',')
             
-            print(sympts)
+            # print(sympts)
             sympts = [int(e) for e in sympts[:-1]]
-            print(sympts)
+            # print(sympts)
             mainList = getsymptoms()
             mainList.sort()
             

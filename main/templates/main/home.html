@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+{% load static %}
 <!--divinectorweb.com-->
 
 <head>
@@ -13,12 +14,12 @@
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
+<!-- TTTTTTTTTTTTTTTTTTTT -->
     <style>
 
         
 
-
+/* dssssssssssssssssssssssssssssssssssssssssssssssssssssssss */
     
     /* KARWA-CAROUSEL */
     header .carousel-inner .item{
@@ -269,7 +270,7 @@
     <!-- <header> -->
 
         <nav class="navbar navbar-expand-lg navbar-dark border border-dark sticky-top a  " >
-            <a class="navbar-brand text-dark" href="#">Disease Prediction System</a>
+            <a class="navbar-brand text-dark" href="#predictNow">Disease Prediction System</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -295,7 +296,7 @@
             </ol><!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
                 <div class="item active">
-                    <img alt="..." src="pill-1884775.jpg">
+                    <img alt="..." src="https://i.imgur.com/53bIFEO.jpg">
                     <div class="carousel-caption">
                         <h2 class="animated bounceInRight" style="animation-delay: 1s">DISEASE PREDICTION SYSTEM USING
                             MACHINE LEARNING ALGORITHMS</h2>
@@ -303,7 +304,7 @@
                     </div>
                 </div>
                 <div class="item">
-                    <img alt="..." src="dna-1811955.jpg">
+                    <img alt="..." src="https://i.imgur.com/udVBofX.jpg">
                     <div class="carousel-caption">
                         <h2 class="animated slideInDown" style="animation-delay: 1s">UTILIZATION OF 3 DIFFERENT ALGORITHMS</h2>
                         <h3 class="animated slideInRight" style="animation-delay: 2s">Random Forest,SVM and Naive Bayes</h3>
@@ -311,7 +312,7 @@
                     </div>
                 </div>
                 <div class="item">
-                    <img alt="..." src="human-skeleton-163715.jpg">
+                    <img alt="..." src="https://i.imgur.com/HM9UKin.jpg">
                     <div class="carousel-caption">
                         <h2 class="animated zoomIn" style="animation-delay: 1s">Easy to Use Interface</h2>
                         <h3 class="animated zoomIn" style="animation-delay: 2s">Select the appropriate symptoms and get your diseases predicted</h3>
@@ -421,7 +422,7 @@
               </div>
 
               
-              <img src="observations.svg" alt="observations" class="svgg">
+              <img src="https://svgshare.com/i/d_E.svg" alt="observations" class="svgg">
 
               <div class="flex relative pb-20 sm:items-center md:w-2/3 mx-auto">
                 <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
@@ -467,13 +468,9 @@
             <img src="index.jpg" alt="No Image Found">
         </div> -->
         
-        <button type="button" class="button button_primary btn-grad newbtn" onclick = load()>Predict Now!</button>
+        <button id="predictNow" type="button" class="button button_primary btn-grad newbtn"> <a href="{% url 'main' %}" style="color: white;">Predict Now! </a> </button>
     <!-- </header> -->
-    <script>
-        function load(){
-            window.location.href = "http://127.0.0.1:8000/main/"
-        }
-    </script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js">
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js">

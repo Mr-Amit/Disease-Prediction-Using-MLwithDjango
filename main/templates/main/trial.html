@@ -338,11 +338,29 @@
         <option value="131">Yellowing Of Eyes</option>
         <option value="132">Yellowish Skin</option> -->
     </select>
+    
+    <script>
+      var arr =new Array;
+          
+      function clearAll() {
+        var list = document.getElementById("myList");
+        while (list.firstChild) {
+          list.removeChild(list.firstChild);
+          arr.pop();
+        }
+        // console.log("WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWw")
+        //Removing the last index as well
+        document.getElementById("indexes").innerHTML = '';      
+      }
+
+
+    </script>
+
 <br>
        
     <button onclick="myFunction()" class="button button_primary a1" id="add">Add</button>
     <button class="button button_danger a3" id="rem">Delete</button>
-    <button class="button button_danger a2" onClick="window.close();" >Clear</button>
+    <button onclick="clearAll()" class="button button_danger a2" >Clear</button>
     
 </div>
 
@@ -600,7 +618,7 @@
   var recent = new Array;
   var zzz= 0 ;
   var cpy =  new Array;
-  var arr =new Array;
+  
   var s2darr =new Array;
   var optdict2 = {1:'Abdominal Pain',
     2:' Abnormal Menstruation',
@@ -879,7 +897,7 @@
     // document.getElementById("demo").innerHTML +=   jsarr[e-1]  + "<br>" 
 
 
-    console.log("E:" + e);
+    // console.log("E:" + e);
     // Array storing index
     arr.push(e-1);
     let lastElement = arr.slice(-1);
@@ -923,7 +941,6 @@
       }
       
     }
-
 
 
     function intersect(a, b) {
@@ -1056,7 +1073,7 @@
           option.value = optdict[ele2];
           mySelect.appendChild(option);
           
-          console.log(ele2 + "-> " + optdict[ele2]);
+          // console.log(ele2 + "-> " + optdict[ele2]);
           // console.log(uniquearr[ele]);
           break;
         }
@@ -1065,9 +1082,9 @@
       // mySelect.appendChild(option);
     }
 
-    for (var ele in recent){
-      console.log(recent[ele]);
-    }
+    // for (var ele in recent){
+    //   console.log(recent[ele]);
+    // }
    
 
 

@@ -44,11 +44,11 @@ def NaiveBayes(symptoms):
     from sklearn.naive_bayes import MultinomialNB
     gnb = MultinomialNB()
     gnb=gnb.fit(X,np.ravel(y))
-    from sklearn.metrics import accuracy_score
-    y_pred = gnb.predict(X_test)
-    # print(accuracy_score(y_test, y_pred))
-    print("Naive bayes : ",end='')
-    print(accuracy_score(y_test, y_pred, normalize=False))
+    
+    # y_pred = gnb.predict(X_test)
+    # # print(accuracy_score(y_test, y_pred))
+    # print("Naive bayes : ",end='')
+    # print(accuracy_score(y_test, y_pred, normalize=False))
 
     # psymptoms = [symptoms[0],symptoms[1],symptoms[2],symptoms[3],symptoms[4]]
     psymptoms = symptoms
@@ -80,11 +80,13 @@ def randomforest(symptoms):
     clf4 = RandomForestClassifier(n_estimators=100,random_state=50,n_jobs=-1,oob_score=True)
     clf4 = clf4.fit(X,np.ravel(y))
     # calculating accuracy 
-    from sklearn.metrics import accuracy_score
-    y_pred=clf4.predict(X_test)
+    # from sklearn.metrics import accuracy_score
+
+    # y_pred=clf4.predict(X_test)
+
     # print(accuracy_score(y_test, y_pred))
-    print(" Random Forest :",end='')
-    print(accuracy_score(y_test, y_pred,normalize=False))
+    # print(" Random Forest :",end='')
+    # print(accuracy_score(y_test, y_pred,normalize=False))
     
     # psymptoms = [symptoms[0],symptoms[1],symptoms[2],symptoms[3],symptoms[4]]
     psymptoms = symptoms
@@ -109,8 +111,8 @@ def DecisionTree(symptoms):
     from sklearn import tree
     clf3 = tree.DecisionTreeClassifier() 
     clf3 = clf3.fit(X,y)
-    from sklearn.metrics import accuracy_score
-    y_pred=clf3.predict(X_test)
+    # from sklearn.metrics import accuracy_score
+    # y_pred=clf3.predict(X_test)
 #     print(accuracy_score(y_test, y_pred))
 
 #    print(accuracy_score(y_test, y_pred,normalize=False))
@@ -161,20 +163,26 @@ def functionSVM(symptoms):
         f[sympt] = 1
     # print(f, 'ffffffffffffffff')
     predictions = model.predict([f]) 
-    print(predictions, type(predictions))
+    # print(predictions, type(predictions))
 
-    from sklearn.metrics import accuracy_score
-    y_pred=temp.predict(X_test)
+    # from sklearn.metrics import accuracy_score
+    # y_pred=temp.predict(X_test)
     # print(accuracy_score(y_test, y_pred))
-    print(" SVM :",end='')
-    print(accuracy_score(y_test, y_pred,normalize=False))
+    # print(" SVM :",end='')
+    # print(accuracy_score(y_test, y_pred,normalize=False))
 
     return predictions[0]
 
+# from django.core.cache import cache # This is the memcache cache.
+
+# def flush():
+#     # This works as advertised on the memcached cache:
+#     cache.clear()
 
 def runApp(symptoms = ['sweating','dehydration','blood_in_sputum','family_history','high_fever']):
     dis = []
     dis.append(NaiveBayes(symptoms))
     dis.append(randomforest(symptoms))
     dis.append(functionSVM(symptoms))
+    # flush()
     return dis
