@@ -1,6 +1,6 @@
 import numpy as np
 import pandas as pd
-import os
+####### import os
 from .store import getsymptoms, getDiseases, getReplaceDict
 from sklearn.svm import SVC
 # import matplotlib.pyplot as plt
@@ -18,8 +18,11 @@ for x in range(0,len(l1)):
     l2.append(0)
 
 # TESTING DATA and Path
-path = os.getcwd() + r'\\main\\'
-tr=pd.read_csv(path + "Testing.csv")
+####### path = os.getcwd() + r'\\main\\'
+
+# tr=pd.read_csv(path + "Testing.csv")
+tr = pd.read_csv(r'https://raw.githubusercontent.com/Mr-Amit/Disease-Prediction-Using-MLwithDjango/master/main/Testing.csv')
+
 tr.replace(getReplaceDict(),inplace=True)
 
 X_test= tr[l1]
@@ -27,7 +30,10 @@ y_test = tr[["prognosis"]]
 np.ravel(y_test)
 
 # TRAINING DATA
-df=pd.read_csv(path + "Training.csv")
+
+# df=pd.read_csv(path + "Training.csv")
+df = pd.read_csv(r"https://raw.githubusercontent.com/Mr-Amit/Disease-Prediction-Using-MLwithDjango/master/main/Training.csv")
+
 #df =df.iloc[:,[36,51,52,53,54,55,88,104,105,111,112,71,72,73,77,113,114,120,108,118,101,99,58,80]]
 df.replace(getReplaceDict(),inplace=True)
 
@@ -138,8 +144,12 @@ def DecisionTree(symptoms):
         return ("No Disease")
 # print(Symptom1) #       sdsdsdsds
 
+
+df1 = pd.read_csv(r"https://raw.githubusercontent.com/Mr-Amit/Disease-Prediction-Using-MLwithDjango/master/main/Prototype.csv")
 def functionSVM(symptoms):
-    df1 = pd.read_csv(path + 'Prototype.csv')
+
+    # df1 = pd.read_csv(path + 'Prototype.csv')
+    
     X = df1.drop(columns="prognosis")
     y = df1['prognosis'] 
     #print(X.head()) 
