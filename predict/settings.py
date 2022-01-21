@@ -56,8 +56,8 @@ ROOT_URLCONF = 'predict.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [r'D:\\7sem2\\7sem\\predict\\main\\templates'],
-        # 'DIRS': [],
+        # 'DIRS': [r'D:\\7sem2\\7sem\\predict\\main\\templates'],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
